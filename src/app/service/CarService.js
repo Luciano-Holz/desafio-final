@@ -1,5 +1,5 @@
-//file 
-const CarRepository = require()
+//file service
+const CarRepository = require('../repository/CarRepository');
 
 class CarService {
     async create(payload) {
