@@ -2,17 +2,19 @@
 const mongoose = require('mongoose');
 
 const CarSchema = mongoose.Schema({
-    modelo: String,
-    cor: String,
-    ano: Number,
-    acessorios: {
-        descricao: String,
-        descricao: String,
-        descricao: String
-    },
-    quantidadePassageiros: Number
+    model: String,
+    color: String,
+    year: Date,
+    accessories: [
+        {
+            description: String,
+            description: String,
+            description: String
+        }
+    ],
+    quantityPassengers: Number
 })
 
-const Carro = mongoose.model('Carro', CarSchema);
+const Car = mongoose.model('Car', CarSchema);
 
-module.exports = Carro;
+module.exports = Car;
