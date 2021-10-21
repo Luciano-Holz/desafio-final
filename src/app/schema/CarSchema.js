@@ -4,9 +4,11 @@ const mongoose = require('mongoose');
 const CarSchema = mongoose.Schema({
     modelo: String,
     cor: String,
-    ano: Date,
+    ano: Number,
     acessorios: {
-        descricao: String
+        descricao1: String,
+        descricao2: String,
+        descricao3: String
     },
     quantidadePassageiros: Number
 })
