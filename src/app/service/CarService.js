@@ -17,14 +17,22 @@ class CarService {
             return error;
         }
     }
-    // async findOne(id) {
-    //     try {
-    //         const result = await CarRepository.findOne(id);
-    //         return result;
-    //     } catch(error) {
-    //         return error;
-    //     }
-    // }
+    async findOne(id) {
+        try {
+            const result = await CarRepository.findOne(id);
+            return result;
+        } catch(error) {
+            return error;
+        }
+    }
+    async deleteOne(id) {
+        try {
+            const result = await CarRepository.deleteOne(id);
+            return result;
+        } catch(error) {
+            return error;
+        }
+    }
 }
 
 module.exports = new CarService();

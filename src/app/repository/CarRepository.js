@@ -7,9 +7,12 @@ class CarRepository {
     async find() {
         return CarSchema.find();
     }
-    // async findOne(_id) {
-    //     return await CarSchema.findOne({_id}).exec();
-    // }
+    async findOne(_id) {
+        return await CarSchema.findOne({_id});
+    }
+    async deleteOne(_id) {
+        return await CarSchema.deleteOne({_id});
+    }
 }
 
 module.exports = new CarRepository();

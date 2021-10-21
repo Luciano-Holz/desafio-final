@@ -11,10 +11,14 @@ class CarController {
         const results = await CarService.find();
         return res.status(200).json(results)
     }
-    // async findOne(req, res) {
-    //     const results = await CarService.findOne(req.params._id);
-    //     return res.status(200).json(results)
-    // }
+    async findOne(req, res) {
+        const results = await CarService.findOne(req.params._id);
+        return res.status(200).json(results)
+    }
+    async deleteOne(req, res) {
+        const results = await CarService.deleteOne(req.params._id);
+        return res.status(204).end();
+    }
 }
 
 module.exports = new CarController();
