@@ -1,4 +1,3 @@
-//file to create routes
 const { Router } = require('express');
 const car = require('../routes/car.router');
 

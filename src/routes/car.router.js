@@ -1,4 +1,3 @@
-//file by routes car
 const CarController = require('../app/controller/CarController');
 const createValidation = require('../app/validation/car/create');
 

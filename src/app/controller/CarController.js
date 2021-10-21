@@ -1,4 +1,3 @@
-//file with class Carcontroller
 const CarService = require('../service/CarService');
 
 class CarController {

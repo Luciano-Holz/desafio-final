@@ -1,4 +1,3 @@
-//file with the class App
 const express = require('express');
 const router = require('./routes');
 require('./infra/database/mongo');

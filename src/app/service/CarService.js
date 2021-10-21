@@ -1,4 +1,3 @@
-//file service
 const CarRepository = require('../repository/CarRepository');
 
 class CarService {

@@ -1,4 +1,3 @@
-//file repositorys
 const CarSchema = require('../schema/CarSchema');
 
 class CarRepository {

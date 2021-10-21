@@ -1,4 +1,3 @@
-//file connection database
 const mongoose = require('mongoose');
 
 class Database {
