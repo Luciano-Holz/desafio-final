@@ -14,7 +14,9 @@ module.exports = async (req, res, next) => {
                 .max(2022)
                 .required(),
              acessorios: {
-                descricao: Joi.string().required()
+                descricao1: Joi.string().required(),
+                descricao2: Joi.string(),
+                descricao3: Joi.string()
              },
             quantidadePassageiros: Joi.number()
                 .required()
