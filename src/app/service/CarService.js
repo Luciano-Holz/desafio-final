@@ -9,25 +9,33 @@ class CarService {
             return error;
         }
     }
-    async find() {
+    async getAll() {
         try {
-            const result = await CarRepository.find();
+            const result = await CarRepository.getAll();
             return result;
         } catch(error) {
             return error;
         }
     }
-    async findOne(id) {
+    async getById(id) {
         try {
-            const result = await CarRepository.findOne(id);
+            const result = await CarRepository.getById(id);
             return result;
         } catch(error) {
             return error;
         }
     }
-    async deleteOne(id) {
+    async update(id, payload) {
         try {
-            const result = await CarRepository.deleteOne(id);
+            const result = await CarRepository.update(id, payload);
+            return result;
+        } catch(error) {
+            return error;
+        }
+    }
+    async delete(id) {
+        try {
+            const result = await CarRepository.delete(id);
             return result;
         } catch(error) {
             return error;

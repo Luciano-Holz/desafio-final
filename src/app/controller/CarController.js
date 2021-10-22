@@ -7,16 +7,28 @@ class CarController {
         const result = { modelo, cor, ano, acessorios, quantidadePassageiros };
         return res.status(201).json(result);
     }
-    async find(req, res) {
-        const results = await CarService.find();
+    async getAll(req, res) {
+        const  { modelo, cor, ano, acessorios, quantidadePassageiros } = req.query;
+        const result = { modelo, cor, ano, acessorios, quantidadePassageiros };
+        console.log(result);
+        const veiculos = await CarService.getAll();
+        if(veiculos) {
+            return res.status(200).json({veiculos})
+        }
+        
+    }
+    async getById(req, res) {
+        const results = await CarService.getById(req.params._id);
         return res.status(200).json(results)
     }
-    async findOne(req, res) {
-        const results = await CarService.findOne(req.params._id);
-        return res.status(200).json(results)
+    async update(req, res) {
+        const { _id } = req.params;
+        const  result = await CarService.update(_id, req.body);
+        return res.status(200).json(result);
+      
     }
-    async deleteOne(req, res) {
-        const results = await CarService.deleteOne(req.params._id);
+    async delete(req, res) {
+        await CarService.delete(req.params._id);
         return res.status(204).end();
     }
 }
