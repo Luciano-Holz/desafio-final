@@ -4,8 +4,8 @@ class CarRepository {
     async create(payload) {
         return CarSchema.create(payload);
     }
-    async getAll() {
-        return CarSchema.find();
+    async getAll(queryParams) {
+        return await CarSchema.find(queryParams);
     }
     async getById(_id) {
         return await CarSchema.findById({_id});
