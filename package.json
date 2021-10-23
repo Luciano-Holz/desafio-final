@@ -10,8 +10,10 @@
   "author": "Luciano Holz",
   "license": "ISC",
   "dependencies": {
+    "cpf-cnpj-validator": "^1.0.3",
     "express": "4.17.1",
     "joi": "17.4.2",
+    "joi-cpf-cnpj": "^0.1.0",
     "mongoose": "6.0.11"
   }
 }
