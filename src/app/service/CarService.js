@@ -9,9 +9,9 @@ class CarService {
             return error;
         }
     }
-    async getAll() {
+    async getAll(queryParams) {
         try {
-            const result = await CarRepository.getAll();
+            const result = await CarRepository.getAll(queryParams);
             return result;
         } catch(error) {
             return error;
