@@ -8,14 +8,8 @@ class CarController {
         return res.status(201).json(result);
     }
     async getAll(req, res) {
-        const  { modelo, cor, ano, acessorios, quantidadePassageiros } = req.query;
-        const result = { modelo, cor, ano, acessorios, quantidadePassageiros };
-        console.log(result);
-        const veiculos = await CarService.getAll();
-        if(veiculos) {
-            return res.status(200).json({veiculos})
-        }
-        
+        const veiculos = await CarService.getAll(req.query);
+        return res.status(200).json({veiculos});
     }
     async getById(req, res) {
         const results = await CarService.getById(req.params._id);
