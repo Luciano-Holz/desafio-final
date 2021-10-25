@@ -33,6 +33,14 @@ class PeopleService {
             return error;
         }
     }
+    async delete(_id) {
+        try {
+            const result = PeopleRepository.delete(_id);
+            return result;
+        } catch (error) {
+            return error;
+        }
+    }
 }
 
 module.exports = new PeopleService();

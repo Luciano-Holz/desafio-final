@@ -13,6 +13,9 @@ class PeopleRepository {
     async update(_id, payload) {
         return PeopleSchema.findByIdAndUpdate({_id}, payload);
     }
+    async delete(_id) {
+        return PeopleSchema.findByIdAndDelete({_id});
+    }
 }
 
 module.exports = new PeopleRepository();

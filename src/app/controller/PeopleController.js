@@ -19,6 +19,10 @@ class PeopleController {
         const result =await PeopleService.getById(_id);
         res.status(200).json(result);
     }
+    async delete(req, res) {
+        await PeopleService.delete(req.params._id);
+        res.status(204).end();
+    }
 }
 
 module.exports = new PeopleController();
