@@ -25,6 +25,14 @@ class PeopleService {
             return error;
         }
     }
+    async update(_id, payload) {
+        try {
+            const result = PeopleRepository.update(_id, payload);
+            return result;
+        } catch (error) {
+            return error;
+        }
+    }
 }
 
 module.exports = new PeopleService();

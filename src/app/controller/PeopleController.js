@@ -13,6 +13,12 @@ class PeopleController {
         const result = await PeopleService.getById(req.params._id);
         res.status(200).json(result);
     }
+    async update(req, res) {
+        const { _id } = req.params;
+         await PeopleService.update(_id, req.body);
+        const result =await PeopleService.getById(_id);
+        res.status(200).json(result);
+    }
 }
 
 module.exports = new PeopleController();
