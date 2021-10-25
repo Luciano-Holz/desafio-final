@@ -7,6 +7,9 @@ class PeopleRepository {
     async getAll() {
         return PeopleSchema.find();
     }
+    async getById(_id) {
+        return PeopleSchema.findById({_id});
+    }
 }
 
 module.exports = new PeopleRepository();

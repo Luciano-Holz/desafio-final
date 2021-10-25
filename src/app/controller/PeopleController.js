@@ -9,6 +9,10 @@ class PeopleController {
         const result = await PeopleService.getAll();
         res.status(200).json(result);
     }
+    async getById(req, res) {
+        const result = await PeopleService.getById(req.params._id);
+        res.status(200).json(result);
+    }
 }
 
 module.exports = new PeopleController();
