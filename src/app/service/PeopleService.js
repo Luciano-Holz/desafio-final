@@ -9,6 +9,14 @@ class PeopleService {
             return error;
         }
     }
+    async getAll() {
+        try {
+            const result = await PeopleRepository.getAll();
+            return result;
+        } catch (error) {
+            return error;
+        }
+    }
 }
 
 module.exports = new PeopleService();

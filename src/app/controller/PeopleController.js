@@ -2,9 +2,12 @@ const PeopleService = require('../service/PeopleService');
 
 class PeopleController {
     async create(req, res) {
-        const results = await PeopleService.create(req.body);
-
-        return res.status(201).json(results);
+        const result = await PeopleService.create(req.body);
+        return res.status(201).json(result);
+    }
+    async getAll(req, res) {
+        const result = await PeopleService.getAll();
+        res.status(200).json(result);
     }
 }
 
