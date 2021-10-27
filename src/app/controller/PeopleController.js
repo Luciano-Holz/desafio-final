@@ -1,9 +1,21 @@
 const PeopleService = require('../service/PeopleService');
+const jwt = require('jsonwebtoken');
+const authConfig = require('../config/auth.json');
 
 class PeopleController {
     async create(req, res) {
-        const result = await PeopleService.create(req.body);
-        return res.status(201).json(result);
+        try {
+            const result = await PeopleService.create(req.body);
+            const { senha, createdAt,  ...people } = result.toObject();
+            function generateToken(params = {}) {
+                return jwt.sign(params, authConfig.secret, { expiresIn: 86400});
+            }
+            return res.status(201)
+                .json({people, token: generateToken({id: people._id})});
+        } catch (error) {
+            return res.status(400).json(error);
+        }
+        
     }
     async getAll(req, res) {
         const result = await PeopleService.getAll();
