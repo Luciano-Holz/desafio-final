@@ -1,13 +1,17 @@
 const PeopleRepository = require('../repository/PeopleRepository');
+const moment = require('moment');
 
 class PeopleService {
     async create(payload) {
-        try {
-            const result = await PeopleRepository.create(payload);
-            return result;
-        } catch (error) {
-            return error;
-        }
+
+            const formatData = moment(payload.data_nascimento, 'DD/MM/YYYY').format('YYYY-MM-DD');
+            const dataT = moment().diff(formatData, 'years');
+            if(dataT < 18) 
+               throw Error('age under 18 years');
+            payload.data_nascimento = formatData;
+            const results = await PeopleRepository.create(payload);
+            return results;
+            
     }
     async getAll() {
         try {
