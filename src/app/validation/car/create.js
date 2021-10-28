@@ -12,7 +12,7 @@ module.exports = async (req, res, next) => {
                 .min(1950)
                 .max(2022)
                 .required(),
-            acessorios: Joi.array().items({descricao: Joi.string().required()}),
+            acessorios: Joi.array().items({descricao: Joi.string().required()}).unique(),
             quantidadePassageiros: Joi.number()
                 .required()
             
