@@ -1,3 +1,4 @@
+
 const CarSchema = require('../schema/CarSchema');
 
 class CarRepository {
@@ -5,7 +6,14 @@ class CarRepository {
         return CarSchema.create(payload);
     }
     async getAll(queryParams) {
-        return await CarSchema.find(queryParams);
+        const { page = 1, limit = 100, ...query } = queryParams;
+        return await CarSchema.paginate(
+            {...query}, 
+        {
+            limit: Number(limit), 
+            page: Number(page),
+            skip: (Number(page) -1) * Number(limit)
+        });
     }
     async getById(_id) {
         return await CarSchema.findById({_id});
