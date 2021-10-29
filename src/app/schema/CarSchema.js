@@ -15,6 +15,6 @@ const CarSchema = mongoose.Schema({
 
 CarSchema.plugin(mongoosePaginate);
 
-const Carro = mongoose.model('Carro', CarSchema);
+const Carro = mongoose.model('Car', CarSchema);
 
 module.exports = Carro;
