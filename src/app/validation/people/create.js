@@ -7,7 +7,7 @@ module.exports = async (req, res, next) => {
             nome: Joi.string()
                 .required(),
             cpf: Joi.string()
-                .pattern(new RegExp(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/))
+                .pattern(new RegExp(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/))             
                 .required(),
             data_nascimento: Joi.date().format('DD/MM/YYYY')
                 .required(),
