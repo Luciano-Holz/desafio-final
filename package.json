@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "supervisor index.js",
+    "start": "supervisor src/server.js",
     "dev": "supervisor src/server.js"
   },
   "author": "Luciano Holz",
   "license": "ISC",
   "dependencies": {
     "@joi/date": "2.1.0",
+    "cpf-cnpj-validator": "1.0.3",
     "express": "4.17.1",
     "joi": "17.4.2",
     "jsonwebtoken": "8.5.1",
@@ -20,6 +21,6 @@
     "mongoose-paginate-v2": "1.4.2"
   },
   "devDependencies": {
-    "supervisor": "^0.12.0"
+    "supervisor": "0.12.0"
   }
 }
