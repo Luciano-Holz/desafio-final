@@ -1,14 +1,10 @@
-const UserRepository = require('../repository/PeopleRepository');
+const PeopleRepository = require('../repository/PeopleRepository');
 
-class UserService {
+class AuthenticatorService {
     async auth(payload) {
-        try {
-            const result = await UserRepository.auth(payload);
+            const result = await PeopleRepository.auth(payload);
             return result;
-        } catch (error) {
-            return error;
-        }
     }
 }
 
-module.exports = new UserService();
+module.exports = new AuthenticatorService();
