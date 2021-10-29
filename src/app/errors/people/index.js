@@ -1,12 +1,12 @@
 
-const IdInvalid = require('../PeopleIdInvalid')
+const IdInvalid = require('./PeopleIdInvalid')
 const PeopleNotFound = require('./PeopleNotFound');
 const PeopleParamNotFound = require('./PeopleParamNotFound');
 
 module.exports = async(error, req, res, next) => {
     let statusCode = 500;
 
-    if(error instanceof PeopleParamNotFound || error instanceof PeopleNotFound || error instanceof IdInvalid) {
+    if(error instanceof PeopleParamNotFound || error instanceof PeopleNotFound) {
         statusCode = 404;
     }
 
