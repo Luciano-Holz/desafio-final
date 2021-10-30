@@ -10,3 +10,5 @@ mongoose version 3.1
 #Running the app
 
 npm install
+npm start
+npm run dev
