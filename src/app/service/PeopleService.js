@@ -41,13 +41,13 @@ class PeopleService {
         payload.data_nascimento = formatData;
         const result = PeopleRepository.update(_id, payload);
         if(!result) 
-            throw new PeopleIdInvalid();
+            throw new  PeopleIdInvalid();
         return result;
     }
     async delete(_id) {
-        const result = await PeopleRepository.delete(_id);
+        const result = await PeopleRepository.delete(_id); 
         if(!result) {
-            throw new PeopleIdInvalid(_id);
+            throw new PeopleNotFound(_id);
         }
         return result;
     }
