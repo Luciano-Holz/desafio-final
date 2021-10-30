@@ -14,7 +14,7 @@ class PeopleController {
         try {
             const result = await PeopleService.getAll();
             const { createdAt, ...people} = result;
-            res.status(200).json(people);
+            res.status(200).json({people});
         } catch (error) {
             return res.status(400).json({message: error.message});
         }
@@ -42,10 +42,17 @@ class PeopleController {
     }
     async delete(req, res) {
         try {
-            await PeopleService.delete(req.params._id);
-            res.status(204).end();
+            const result = await PeopleService.delete(req.params._id);
+            res.status(204).json(result);
+
         } catch (error) {
-            return res.status(400).json({message: error.message});
+            let statusCode;
+            if( error.message == "PeopleNotFound") {
+                statusCode = 404;
+            } else {
+                statusCode = 400
+            }
+            return res.status(statusCode).json({message: error.message});
         } 
     }
 }
