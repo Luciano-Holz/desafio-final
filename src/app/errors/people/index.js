@@ -13,5 +13,5 @@ module.exports = async(error, req, res, next) => {
     if(error instanceof IdInvalid) {
         statusCode = 400;
     }
-    res.status(statusCode).send(JSON.stringify({ message: error.message, Error_id: error.idErro }));
+    res.status(statusCode).send(JSON.stringify({ message: error.message, Error_id: error.idError }));
 }
