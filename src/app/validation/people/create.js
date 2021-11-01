@@ -5,6 +5,7 @@ module.exports = async (req, res, next) => {
     try {
         const schema = Joi.object({
             nome: Joi.string()
+                .trim()
                 .required(),
             cpf: Joi.string()
                 .pattern(new RegExp(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/))             
