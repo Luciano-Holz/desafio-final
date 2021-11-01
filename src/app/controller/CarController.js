@@ -1,11 +1,11 @@
+const { paginateSerialize, serialize } = require('../serialize/CarSerielize');
 const CarService = require('../service/CarService');
 
 class CarController {
     async create(req, res) { 
         try {
-            const results = await CarService.create(req.body);
-            const  { _id, __v, ...result} = results.toObject();//
-            return res.status(201).json(result);
+            const result = await CarService.create(req.body);
+            return res.status(201).json(serialize(result));
         } catch (error) {
             return res.status(400).json({message: error.message});
         }
@@ -13,29 +13,26 @@ class CarController {
     async getAll(req, res) {
         try {
             const result = await CarService.getAll(req.query);
-            const {pagingCounter, hasPrevPage, hasNextPage, prevPage, nextPage, ...veiculos} = result;
-            return res.status(200).json({veiculos});
+            return res.status(200).json(paginateSerialize(result));
         } catch (error) {
             return res.status(400).json({message: error.message});
         } 
     }
     async getById(req, res) {
         try {
-            const results = await CarService.getById(req.params._id);
-            const  { __v, ...result} = results.toObject();
-            return res.status(200).json(result)
+            const result = await CarService.getById(req.params._id);
+            return res.status(200).json(serialize(result))
         } catch (error) {
-            return res.status(400).json('Id Invalid');
+            return res.status(400).json({message: error.message});
         }
     }
     async update(req, res) {
         try {
-             const { _id } = req.params;
-            const  results = await CarService.update(_id, req.body);
-            const  { __v, ...result} = results.toObject();
-            return res.status(200).json(result);
+            const { _id } = req.params;
+            const  result = await CarService.update(_id, req.body);
+            return res.status(200).json(serialize(result));
         } catch (error) {
-            return res.status(400).json('Id Invalid');
+            return res.status(400).json({message: error.message});
         }
     }
     async delete(req, res) {
@@ -43,7 +40,7 @@ class CarController {
            const result = await CarService.delete(req.params._id);
             return res.status(204).end(); 
         } catch (error) {
-            return res.status(400).json('Id Invalid');
+            return res.status(400).json({message: error.message});
         }  
     }
 }
