@@ -21,6 +21,7 @@
     "mongoose-paginate-v2": "1.4.2"
   },
   "devDependencies": {
+    "eslint": "^8.1.0",
     "supervisor": "0.12.0"
   }
 }
