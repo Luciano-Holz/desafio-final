@@ -5,14 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "supervisor src/server.js",
+    "start": "node src/server.js",
     "dev": "supervisor src/server.js"
   },
   "author": "Luciano Holz",
   "license": "ISC",
   "dependencies": {
     "@joi/date": "2.1.0",
-    "cpf-cnpj-validator": "1.0.3",
     "express": "4.17.1",
     "joi": "17.4.2",
     "jsonwebtoken": "8.5.1",
@@ -21,7 +20,12 @@
     "mongoose-paginate-v2": "1.4.2"
   },
   "devDependencies": {
-    "eslint": "^8.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-plugin": "^1.0.11",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "prettier": "^2.4.1",
     "supervisor": "0.12.0"
   }
 }
