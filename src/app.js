@@ -4,21 +4,20 @@ const PeopleErrors = require('./app/errors/people/index');
 require('./infra/database/mongo');
 
 class App {
+  constructor() {
+    this.server = express();
+    this.middlewares();
+    this.routes();
+  }
 
-    constructor() {
-        this.server = express();
-        this.middlewares();
-        this.routes();
-    }
+  middlewares() {
+    this.server.use(express.json());
+    this.server.use(PeopleErrors);
+  }
 
-    middlewares() {
-        this.server.use(express.json());
-        this.server.use(PeopleErrors);
-    }
-
-    routes() {
-        router(this.server);
-    }
+  routes() {
+    router(this.server);
+  }
 }
 
 module.exports = new App().server;
