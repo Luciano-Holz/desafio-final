@@ -1,10 +1,11 @@
+const moment = require('moment');
+
 const serialize = ({ _id, nome, cpf, data_nascimento, email, habilitado }) => ({
   _id,
   nome,
   cpf,
-  data_nascimento,
+  data_nascimento: moment(data_nascimento).utc().format('DD/MM/YYYY'),
   email,
-
   habilitado
 });
 
