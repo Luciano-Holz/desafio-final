@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const crypto = require('crypto');
+const mongoosePaginate = require('mongoose-paginate-v2');
 
 const PeopleSchema = mongoose.Schema({
   nome: {
@@ -37,6 +38,8 @@ const PeopleSchema = mongoose.Schema({
     default: Date.now
   }
 });
+
+PeopleSchema.plugin(mongoosePaginate);
 
 const People = mongoose.model('People', PeopleSchema);
 
