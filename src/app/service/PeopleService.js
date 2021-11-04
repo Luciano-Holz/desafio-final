@@ -50,8 +50,6 @@ class PeopleService {
 
   async getAll(queryParams) {
     const result = await PeopleRepository.getAll(queryParams);
-    const formatData = moment(result.data_nascimento).format('DD/MM/YYYY');
-    queryParams.data_nascimento = formatData;
     if (!result) throw new PeopleNotFound();
     return result;
   }
