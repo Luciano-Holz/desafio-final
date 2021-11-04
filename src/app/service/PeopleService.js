@@ -24,9 +24,20 @@ class PeopleService {
         cpF === '99999999999'
       )
         return false;
+      let add = 0;
+      for (let i = 0; i < 9; i++) add += parseInt(cpf.charAt(i), 10) * (10 - i);
+      let rev = 11 - (add % 11);
+      if (rev === 10 || rev === 11) rev = 0;
+      if (rev !== parseInt(cpf.charAt(9), 10)) return false;
+      add = 0;
+      for (let i = 0; i < 10; i++) add += parseInt(cpf.charAt(i), 10) * (11 - i);
+      rev = 11 - (add % 11);
+      if (rev === 10 || rev === 11) rev = 0;
+      if (rev !== parseInt(cpf.charAt(10), 10)) return false;
       return true;
     }
-    if (!validateCPF(cpf)) throw Error('cpf invalido');
+    if (!validateCPF(cpf)) throw Error(`CPF ${cpf} is invalid`);
+    console.log(Error);
     payload.cpf = cpfnew;
     const formatData = moment(payload.data_nascimento, 'DD/MM/YYYY').format('YYYY-MM-DD');
     const dataT = moment().diff(formatData, 'years');
@@ -37,10 +48,10 @@ class PeopleService {
     return results;
   }
 
-  async getAll() {
-    const result = await PeopleRepository.getAll();
+  async getAll(queryParams) {
+    const result = await PeopleRepository.getAll(queryParams);
     const formatData = moment(result.data_nascimento).format('DD/MM/YYYY');
-    result.data_nascimento = formatData;
+    queryParams.data_nascimento = formatData;
     if (!result) throw new PeopleNotFound();
     return result;
   }
@@ -52,6 +63,40 @@ class PeopleService {
   }
 
   async update(_id, payload) {
+    const cpfnew = payload.cpf;
+    const cpf = cpfnew.replace(/\.|-/g, '');
+    function validateCPF(cpF) {
+      const cpfs = cpf.replace(/[^\d]+/g, '');
+      if (cpfs === '') return false;
+      if (
+        cpF.length !== 11 ||
+        cpF === '00000000000' ||
+        cpF === '11111111111' ||
+        cpF === '22222222222' ||
+        cpF === '33333333333' ||
+        cpF === '44444444444' ||
+        cpF === '55555555555' ||
+        cpF === '66666666666' ||
+        cpF === '77777777777' ||
+        cpF === '88888888888' ||
+        cpF === '99999999999'
+      )
+        return false;
+      let add = 0;
+      for (let i = 0; i < 9; i++) add += parseInt(cpf.charAt(i), 10) * (10 - i);
+      let rev = 11 - (add % 11);
+      if (rev === 10 || rev === 11) rev = 0;
+      if (rev !== parseInt(cpf.charAt(9), 10)) return false;
+      add = 0;
+      for (let i = 0; i < 10; i++) add += parseInt(cpf.charAt(i), 10) * (11 - i);
+      rev = 11 - (add % 11);
+      if (rev === 10 || rev === 11) rev = 0;
+      if (rev !== parseInt(cpf.charAt(10), 10)) return false;
+      return true;
+    }
+    if (!validateCPF(cpf)) throw Error(`CPF ${cpf} is invalid`);
+    console.log(Error);
+    payload.cpf = cpfnew;
     const formatData = moment(payload.data_nascimento, 'DD/MM/YYYY').format('YYYY-MM-DD');
     const dataT = moment().diff(formatData, 'years');
     if (dataT < 18) throw Error('age under 18 years');
