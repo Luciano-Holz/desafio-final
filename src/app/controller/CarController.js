@@ -48,6 +48,16 @@ class CarController {
       return res.status(400).json({ description: error.path, error: error.message });
     }
   }
+
+  async patch(req, res) {
+    try {
+      const { _idCar, _idAcessorio } = req.params;
+      const result = await CarService.patch(_idCar, _idAcessorio, req.body);
+      return res.status(200).json(serialize(result));
+    } catch (error) {
+      return res.status(400).json({ description: error.path, error: error.message });
+    }
+  }
 }
 
 module.exports = new CarController();

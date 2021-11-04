@@ -33,6 +33,11 @@ class CarService {
     }
     return result;
   }
+
+  async patch(_idCar, _idAcessorio, payload) {
+    const result = await CarRepository.patch(_idCar, _idAcessorio, payload);
+    return result;
+  }
 }
 
 module.exports = new CarService();

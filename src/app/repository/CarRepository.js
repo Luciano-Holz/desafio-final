@@ -32,6 +32,16 @@ class CarRepository {
     const result = await CarSchema.findByIdAndDelete({ _id });
     return result;
   }
+
+  async patch(_id, _idAcessorio, payload) {
+    const result = await CarSchema.findOne({ _id });
+    const newAcessorios = [];
+    result.acessorios.forEach((e) => {
+      if (e._id !== _id) newAcessorios.push(e);
+      if (e._id === _id) newAcessorios.push(payload);
+    });
+    return result;
+  }
 }
 
 module.exports = new CarRepository();
