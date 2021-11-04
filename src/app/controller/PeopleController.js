@@ -19,8 +19,8 @@ class PeopleController {
 
   async getAll(req, res) {
     try {
-      const people = await PeopleService.getAll(req.query);
-      return res.status(200).json(paginateSerialize(people));
+      const result = await PeopleService.getAll(req.query);
+      return res.status(200).json(paginateSerialize(result));
     } catch (error) {
       return res.status(400).json({ description: error.path, name: error.message });
     }
