@@ -34,12 +34,22 @@ class CarRepository {
   }
 
   async patch(_id, _idAcessorio, payload) {
-    const result = await CarSchema.findOne({ _id });
+    const veiculo = await CarSchema.findById({ _id });
     const newAcessorios = [];
-    result.acessorios.forEach((e) => {
-      if (e._id !== _id) newAcessorios.push(e);
-      if (e._id === _id) newAcessorios.push(payload);
+    veiculo.acessorios.forEach((e) => {
+      console.log(e);
+      if (JSON.stringify(e._id) !== JSON.stringify(_idAcessorio)) {
+        newAcessorios.push(e);
+      } else if (JSON.stringify(e._id) === JSON.stringify(_idAcessorio)) {
+        newAcessorios.push(payload);
+      }
     });
+
+    const result = await CarSchema.findOneAndUpdate(
+      { 'acessorios._id': _idAcessorio },
+      { acessorios: newAcessorios },
+      { returnOriginal: false }
+    );
     return result;
   }
 }
