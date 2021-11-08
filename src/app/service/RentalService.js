@@ -20,6 +20,11 @@ class RentalService {
     const result = await RentalRepository.create(payload);
     return result;
   }
+
+  async getAll(queryParams) {
+    const result = await RentalRepository.getAll(queryParams);
+    return result;
+  }
 }
 
 module.exports = new RentalService();
