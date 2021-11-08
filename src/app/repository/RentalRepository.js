@@ -17,6 +17,11 @@ class RentalRepository {
     );
     return result;
   }
+
+  async getById(_id) {
+    const result = await RentalSchema.findById({ _id });
+    return result;
+  }
 }
 
 module.exports = new RentalRepository();
