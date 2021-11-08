@@ -28,6 +28,16 @@ class RentalController {
       return res.status(400).json({ description: error.path, name: error.message });
     }
   }
+
+  async update(req, res) {
+    try {
+      const { _id } = req.params;
+      const result = await RentalService.update(_id, req.body);
+      return res.status(200).json(serialize(result));
+    } catch (error) {
+      return res.status(400).json({ description: error.path, name: error.message });
+    }
+  }
 }
 
 module.exports = new RentalController();
