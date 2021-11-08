@@ -22,6 +22,11 @@ class RentalRepository {
     const result = await RentalSchema.findById({ _id });
     return result;
   }
+
+  async update(_id, payload) {
+    const result = await RentalSchema.findByIdAndUpdate({ _id }, payload, { new: true });
+    return result;
+  }
 }
 
 module.exports = new RentalRepository();
