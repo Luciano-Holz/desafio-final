@@ -54,6 +54,12 @@ class RentalService {
     if (!result) throw new RentalNotFound();
     return result;
   }
+
+  async delete(_id) {
+    const result = await RentalRepository.delete(_id);
+    if (!result) throw new RentalNotFound(_id);
+    return result;
+  }
 }
 
 module.exports = new RentalService();
