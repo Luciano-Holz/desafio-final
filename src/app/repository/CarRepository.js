@@ -24,7 +24,7 @@ class CarRepository {
   }
 
   async update(_id, payload) {
-    const result = await CarSchema.findByIdAndUpdate({ _id }, payload);
+    const result = await CarSchema.findByIdAndUpdate({ _id }, payload, { new: true });
     return result;
   }
 
@@ -37,7 +37,6 @@ class CarRepository {
     const veiculo = await CarSchema.findById({ _id });
     const newAcessorios = [];
     veiculo.acessorios.forEach((e) => {
-      console.log(e);
       if (JSON.stringify(e._id) !== JSON.stringify(_idAcessorio)) {
         newAcessorios.push(e);
       } else if (JSON.stringify(e._id) === JSON.stringify(_idAcessorio)) {
