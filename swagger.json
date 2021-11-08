@@ -1,0 +1,429 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "API Locadora Compassolisa",
+      "description": "API de carros, usuários e endereços da Autolocadora Compassolisa.",
+      "version": "1.0.0",
+      "contact": {
+        "name": "Luciano Fuhrmann Holz"
+      }
+    },
+    "externalDocs": {
+      "description": "Repositório do projeto",
+      "url": "https://github.com/Luciano-Holz/desafio-final1.git"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3000/api/v1",
+        "description": "Servidor da aplicação"
+      },
+      {
+        "url": "http://127.0.0.1:3000/api/v1",
+        "description": "Servidor da aplicação"
+      }
+    ],
+    "tags": [
+      {
+        "name": "Veiculos",
+        "description": "Rotas dos Veiculos"
+      },
+      {
+        "name": "Usuários",
+        "description": "Rotas dos Usuários"
+      },
+      {
+        "name": "Autenticação",
+        "description": "Autenticação do Usuários"
+      },
+      {
+        "name": "Locadora",
+        "description": "Rotas das Locadoras"
+      }
+    ],
+    "paths": {
+      "/car/": {
+        "post": {
+          "tags": [
+            "Veiculos"
+          ],
+          "summary": "Cadastra Veiculo",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "modelo": {
+                      "type": "string",
+                      "example": "Ford Focus"
+                    },
+                    "cor": {
+                      "type": "string",
+                      "example": "prata"
+                    },
+                    "ano": {
+                      "type": "number",
+                      "example": 2000
+                    },
+                    "acessorios": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "descricao": {
+                            "type": "string",
+                            "example": "Ar Condicionado"
+                          }
+                        }
+                      }
+                    },
+                    "quantidadePassageiros": {
+                      "type": "number",
+                      "example": 5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "_id": {
+                        "type": "number"
+                      },
+                      "modelo": {
+                        "type": "string"
+                      },
+                      "cor": {
+                        "type": "string"
+                      },
+                      "ano": {
+                        "type": "number"
+                      },
+                      "acessorios": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "descricao": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "quantidadePassageiros": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "get": {
+          "tags": [
+            "Veiculos"
+          ],
+          "summary": "Consulta todos os veiculos ou por parametros",
+          "parameters": [
+            {
+              "name": "modelo",
+              "in": "query",
+              "description": "Modelo do Veiculo",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "cor",
+              "in": "query",
+              "description": "Cor do Veiculo",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "ano",
+              "in": "query",
+              "description": "Ano do Veiculo",
+              "schema": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "descricao",
+              "in": "query",
+              "description": "Acessorios do Veiculo",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "quantidadePassageiros",
+              "in": "query",
+              "description": "Quantidade de Passageiros",
+              "schema": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "limit",
+              "in": "query",
+              "description": "limite de resultados na pagina",
+              "schema": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "total",
+              "in": "query",
+              "description": "quantidade total de paginas",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "offset",
+              "in": "query",
+              "description": "quantidade de resultados ignorados apos os offsets",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "offsets",
+              "in": "query",
+              "description": "quantidade de resultados ignorados a partir do primeiro resultado",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "ok",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "veiculos": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "_id": {
+                              "type": "number"
+                            },
+                            "modelo": {
+                              "type": "string"
+                            },
+                            "cor": {
+                              "type": "string"
+                            },
+                            "ano": {
+                              "type": "number"
+                            },
+                            "acessorios": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "descricao": {
+                                    "type": "string"
+                                  }
+                                }
+                              }
+                            },
+                            "quantidadePassageiros": {
+                              "type": "number"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/car/{id}": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "required": true
+          }
+        ],
+        "get": {
+          "tags": [
+            "Veiculos"
+          ],
+          "summary": "Consulta veiculo pelo Id",
+          "responses": {
+            "200": {
+              "description": "Sucesso",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "_id": {
+                        "type": "number"
+                      },
+                      "modelo": {
+                        "type": "string"
+                      },
+                      "cor": {
+                        "type": "string"
+                      },
+                      "ano": {
+                        "type": "number"
+                      },
+                      "acessorios": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "descricao": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "quantidadePassageiros": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          }
+        },
+        "put": {
+          "tags": [
+            "Veiculos"
+          ],
+          "summary": "Altera as propriedades de um veiculo, encontrado pelo Id",
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "modelo": {
+                      "type": "string",
+                      "example": "Ford Focus"
+                    },
+                    "cor": {
+                      "type": "string",
+                      "example": "prata"
+                    },
+                    "ano": {
+                      "type": "number",
+                      "example": 2013
+                    },
+                    "acessorios": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "descricao": {
+                            "type": "string",
+                            "example": "Ar Condicionado"
+                          }
+                        }
+                      }
+                    },
+                    "quantidadePassageiros": {
+                      "type": "number",
+                      "example": 5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "201": {
+              "description": "Created",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "_id": {
+                        "type": "number"
+                      },
+                      "modelo": {
+                        "type": "string"
+                      },
+                      "cor": {
+                        "type": "string"
+                      },
+                      "ano": {
+                        "type": "number"
+                      },
+                      "acessorios": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "descricao": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "quantidadePassageiros": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request"
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "Veiculos"
+          ],
+          "summary": "Deleta um veiculo, encontrado pelo Id",
+          "responses": {
+            "204": {
+              "description": "No Content"
+            },
+            "400": {
+              "description": "Bad Request"
+            },
+            "404": {
+              "description": "Not Found"
+            }
+          }
+        }
+    }
+    }
+}
