@@ -34,6 +34,26 @@ class RentalService {
     if (!result) throw new RentalNotFound(_id);
     return result;
   }
+
+  async update(_id, payload) {
+    const viaCep = await ViacepRepository.viaCep(payload.endereco[0].cep);
+    const { cep, logradouro, complemento, bairro, localidade, uf } = viaCep;
+    payload.endereco = [
+      {
+        cep,
+        logradouro,
+        number: payload.endereco[0].number,
+        complemento,
+        bairro,
+        localidade,
+        uf,
+        isFilial: payload.endereco[0].isFilial
+      }
+    ];
+    const result = await RentalRepository.update(_id, payload);
+    if (!result) throw new RentalNotFound();
+    return result;
+  }
 }
 
 module.exports = new RentalService();
