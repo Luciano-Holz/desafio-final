@@ -28,17 +28,13 @@ class CarService {
 
   async delete(_id) {
     const result = await CarRepository.delete(_id);
-    if (!result) {
-      throw new CarNotFound(_id);
-    }
+    if (!result) throw new CarNotFound(_id);
     return result;
   }
 
   async patch(_id, _idAcessorio, payload) {
     const result = await CarRepository.patch(_id, _idAcessorio, payload);
-    if (!result) {
-      throw new CarNotFound(_idAcessorio);
-    }
+    if (!result) throw new CarNotFound(_idAcessorio);
     return result;
   }
 }
