@@ -6,7 +6,7 @@ const { validateCpf } = require('../utils/cpfValidator');
 
 class PeopleService {
   async create(payload) {
-    if (!validateCpf(payload)) throw Error(`CPF ${payload.cnpj} is invalid`);
+    if (!validateCpf(payload)) throw Error(`CPF ${payload.cpf} is invalid`);
     const formatData = moment(payload.data_nascimento, 'DD/MM/YYYY').format('YYYY-MM-DD');
     const dataT = moment().diff(formatData, 'years');
     if (dataT < 18) throw Error('Age under 18 years');
