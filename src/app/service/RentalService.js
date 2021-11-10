@@ -1,3 +1,4 @@
+const CnpjInvalid = require('../errors/rental/CnpjInvalid');
 const RentalNotFound = require('../errors/rental/RentalNotFound');
 const RentalRepository = require('../repository/RentalRepository');
 const ViacepRepository = require('../repository/ViacepRepository');
@@ -5,7 +6,7 @@ const { validateCnpj } = require('../utils/cnpjValidator');
 
 class RentalService {
   async create(payload) {
-    if (!validateCnpj(payload)) throw Error(`CNPJ ${payload.cnpj} is invalid`);
+    if (!validateCnpj(payload)) throw new CnpjInvalid(payload.cnpj);
     const viaCep = await ViacepRepository.viaCep(payload.endereco[0].cep);
     const { cep, logradouro, complemento, bairro, localidade, uf } = viaCep;
     payload.endereco = [
