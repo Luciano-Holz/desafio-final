@@ -1,3 +1,4 @@
+const CarNotFound = require('../errors/car/CarNotFound');
 const CarSchema = require('../schema/CarSchema');
 
 class CarRepository {
@@ -35,19 +36,15 @@ class CarRepository {
 
   async patch(_id, _idAcessorio, payload) {
     const veiculo = await CarSchema.findById({ _id });
-    const newAcessorios = [];
-    veiculo.acessorios.forEach((e) => {
-      if (JSON.stringify(e._id) !== JSON.stringify(_idAcessorio)) {
-        newAcessorios.push(e);
-      } else if (JSON.stringify(e._id) === JSON.stringify(_idAcessorio)) {
-        newAcessorios.push(payload);
-      }
-    });
-
+    if (!veiculo) throw new CarNotFound();
     const result = await CarSchema.findOneAndUpdate(
       { 'acessorios._id': _idAcessorio },
-      { acessorios: newAcessorios },
-      { returnOriginal: false }
+      {
+        $set: {
+          'acessorios.$.descricao': payload.descricao
+        }
+      },
+      { new: true, safe: true, upsert: true }
     );
     return result;
   }
