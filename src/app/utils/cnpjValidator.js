@@ -8,8 +8,9 @@ const validateCnpj = (payload) => {
     if (value.length > 18) return false;
     const digitsOnly = /^\d{14}$/.test(value);
     const validFormat = /^\d{2}.\d{3}.\d{3}\/\d{4}-\d{2}$/.test(value);
-    if (digitsOnly || validFormat) return true;
-    return false;
+    // eslint-disable-next-line no-unused-expressions
+    if (digitsOnly || validFormat) true;
+    else return false;
   }
   const match = value.toString().match(/\d/g);
   const numbers = Array.isArray(match) ? match.map(Number) : [];
