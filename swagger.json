@@ -5,12 +5,17 @@
     "description": "API de carros, usuários e endereços da Autolocadora Compassolisa.",
     "version": "1.0.0",
     "contact": {
-      "name": "Luciano Fuhrmann Holz"
+      "name": "Luciano Fuhrmann Holz",
+      "email": "luciano.holz@hotmail.com"
     }
   },
   "externalDocs": {
     "description": "Repositório do projeto",
     "url": "https://github.com/Luciano-Holz/desafio-final1.git"
+  },
+  "license": {
+    "name": "MIT",
+    "url": "https://opensource.org/licenses/MIT"
   },
   "servers": [
     {
@@ -40,12 +45,22 @@
       "description": "Rotas das Locadoras"
     }
   ],
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
   "paths": {
     "/car": {
       "post": {
-        "tags": [
-          "Veiculos"
+        "security": [
+          {
+            "bearerAuth": []
+          }
         ],
+        "tags": ["Veiculos"],
         "summary": "Cadastra Veiculo",
         "requestBody": {
           "content": {
@@ -131,9 +146,12 @@
         }
       },
       "get": {
-        "tags": [
-          "Veiculos"
+        "security": [
+          {
+            "bearerAuth": []
+          }
         ],
+        "tags": ["Veiculos"],
         "summary": "Consulta todos os veiculos ou por parametros",
         "parameters": [
           {
@@ -271,9 +289,12 @@
         }
       ],
       "get": {
-        "tags": [
-          "Veiculos"
+        "security": [
+          {
+            "bearerAuth": []
+          }
         ],
+        "tags": ["Veiculos"],
         "summary": "Consulta veiculo pelo Id",
         "responses": {
           "200": {
@@ -320,9 +341,12 @@
         }
       },
       "put": {
-        "tags": [
-          "Veiculos"
+        "security": [
+          {
+            "bearerAuth": []
+          }
         ],
+        "tags": ["Veiculos"],
         "summary": "Altera as propriedades de um veiculo, encontrado pelo Id",
         "requestBody": {
           "content": {
@@ -411,9 +435,12 @@
         }
       },
       "delete": {
-        "tags": [
-          "Veiculos"
+        "security": [
+          {
+            "bearerAuth": []
+          }
         ],
+        "tags": ["Veiculos"],
         "summary": "Deleta um veiculo, encontrado pelo Id",
         "responses": {
           "204": {
@@ -448,9 +475,12 @@
         }
       ],
       "patch": {
-        "tags": [
-          "Veiculos"
+        "security": [
+          {
+            "bearerAuth": []
+          }
         ],
+        "tags": ["Veiculos"],
         "summary": "Altera as propriedades da descricao, encontrada pelo Id",
         "requestBody": {
           "content": {
@@ -517,9 +547,7 @@
     },
     "/people": {
       "post": {
-        "tags": [
-          "Usuários"
-        ],
+        "tags": ["Usuários"],
         "summary": "Cadastra Usuário",
         "requestBody": {
           "content": {
@@ -551,10 +579,7 @@
                   "habilitado": {
                     "type": "string",
                     "example": "sim",
-                    "enum": [
-                      "sim",
-                      "nao"
-                    ]
+                    "enum": ["sim", "nao"]
                   }
                 }
               }
@@ -596,9 +621,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Usuários"
-        ],
+        "tags": ["Usuários"],
         "summary": "Consulta todos os usuários ou por parametros",
         "parameters": [
           {
@@ -731,9 +754,7 @@
         }
       ],
       "get": {
-        "tags": [
-          "Usuários"
-        ],
+        "tags": ["Usuários"],
         "summary": "Consulta usuário pelo Id",
         "responses": {
           "200": {
@@ -773,9 +794,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Usuários"
-        ],
+        "tags": ["Usuários"],
         "summary": "Altera as propriedades de um usuário, encontrado pelo Id",
         "requestBody": {
           "content": {
@@ -805,10 +824,7 @@
                   "habilitado": {
                     "type": "string",
                     "example": "sim",
-                    "enum": [
-                      "sim",
-                      "não"
-                    ]
+                    "enum": ["sim", "não"]
                   }
                 }
               }
@@ -856,9 +872,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Usuários"
-        ],
+        "tags": ["Usuários"],
         "summary": "Deleta um usuário, encontrado pelo Id",
         "responses": {
           "204": {
@@ -875,9 +889,7 @@
     },
     "/authenticate": {
       "post": {
-        "tags": [
-          "Autenticação"
-        ],
+        "tags": ["Autenticação"],
         "summary": "Autentica o usuário",
         "requestBody": {
           "content": {
@@ -931,9 +943,7 @@
     },
     "/rental": {
       "post": {
-        "tags": [
-          "Locadora"
-        ],
+        "tags": ["Locadora"],
         "summary": "Cadastra uma Locadora, com dados de API externa",
         "requestBody": {
           "content": {
@@ -1041,9 +1051,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Locadora"
-        ],
+        "tags": ["Locadora"],
         "parameters": [
           {
             "name": "nome",
@@ -1202,9 +1210,7 @@
         }
       ],
       "get": {
-        "tags": [
-          "Locadora"
-        ],
+        "tags": ["Locadora"],
         "summary": "Consulta locadora pelo Id",
         "responses": {
           "200": {
@@ -1269,9 +1275,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Locadora"
-        ],
+        "tags": ["Locadora"],
         "summary": "Altera as propriedades de uma locadora, encontrada pelo Id",
         "requestBody": {
           "content": {
@@ -1382,9 +1386,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Locadoras"
-        ],
+        "tags": ["Locadora"],
         "summary": "Deleta uma locadora, encontrada pelo Id",
         "responses": {
           "204": {
@@ -1397,6 +1399,15 @@
             "description": "Not Found"
           }
         }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
       }
     }
   }
