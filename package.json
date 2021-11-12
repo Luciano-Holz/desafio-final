@@ -4,9 +4,9 @@
   "description": "API NodeJs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/server.js",
-    "dev": "supervisor src/server.js"
+    "dev": "supervisor src/server.js",
+    "test": "jest --runInBand"
   },
   "author": "Luciano Holz",
   "license": "ISC",
@@ -15,6 +15,8 @@
     "axios": "0.24.0",
     "cors": "2.8.5",
     "express": "4.17.1",
+    "factory-girl": "5.0.4",
+    "faker": "5.5.3",
     "joi": "17.4.2",
     "jsonwebtoken": "8.5.1",
     "moment": "2.29.1",
@@ -28,7 +30,9 @@
     "eslint-config-plugin": "1.0.11",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-import": "2.25.2",
+    "jest": "27.3.1",
     "prettier": "2.4.1",
+    "supertest": "6.1.6",
     "supervisor": "0.12.0"
   }
 }
