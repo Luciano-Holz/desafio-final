@@ -1,6 +1,6 @@
 # API Locadora Compassolisa
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Luciano-Holz/compasssolisa)
+![GitHub repo size](https://img.shields.io/github/repo-size/Luciano-Holz/desfio-final1)
 
 ## Description
 
@@ -61,7 +61,7 @@ Na pasta /compassolisa:
 npm install
 ```
 
-## ☕ Usando <API Locadora Compassolisa>
+##  Using <API Locadora Compassolisa>
 
 To run locally <API Locadora Compassolisa>:
 
