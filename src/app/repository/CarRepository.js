@@ -1,4 +1,3 @@
-const CarNotFound = require('../errors/car/CarNotFound');
 const CarSchema = require('../schema/CarSchema');
 
 class CarRepository {
@@ -35,10 +34,8 @@ class CarRepository {
   }
 
   async patch(_id, _idAcessorio, payload) {
-    const veiculo = await CarSchema.findById({ _id });
-    if (!veiculo) throw new CarNotFound();
     const result = await CarSchema.findOneAndUpdate(
-      { 'acessorios._id': _idAcessorio },
+      { _id, 'acessorios._id': _idAcessorio },
       {
         $set: {
           'acessorios.$.descricao': payload.descricao
