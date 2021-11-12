@@ -9,6 +9,10 @@ class CarService {
   }
 
   async getAll(queryParams) {
+    if (queryParams.descricao) {
+      queryParams['acessorios.descricao'] = queryParams.descricao;
+      delete queryParams.descricao;
+    }
     const result = await CarRepository.getAll(queryParams);
     if (!result) throw new CarNotFound();
     return result;
@@ -34,7 +38,7 @@ class CarService {
 
   async patch(_id, _idAcessorio, payload) {
     const result = await CarRepository.patch(_id, _idAcessorio, payload);
-    if (!result) throw new CarNotFound(_idAcessorio);
+    if (!result) throw new CarNotFound(_id);
     return result;
   }
 }
