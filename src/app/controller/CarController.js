@@ -7,6 +7,12 @@ class CarController {
       const result = await CarService.create(req.body);
       return res.status(201).json(serialize(result));
     } catch (error) {
+      if (error.code === 11000) {
+        return res.status(400).json({
+          description: 'Conflict',
+          name: `${Object.keys(error.keyValue)} ${Object.values(error.keyValue)} already in use`
+        });
+      }
       return res.status(400).json({ description: error.path, name: error.message });
     }
   }
@@ -44,7 +50,6 @@ class CarController {
       await CarService.delete(req.params._id);
       return res.status(204).end();
     } catch (error) {
-      if (error.idErro === 2) return res.status(404).json({ description: error.path, name: error.message });
       return res.status(400).json({ description: error.path, name: error.message });
     }
   }
