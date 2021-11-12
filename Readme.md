@@ -76,6 +76,11 @@ Run as developer:
 ```
 npm run dev
 ```
+Run to test: 
+
+```
+npm run test
+```
 
 To use API with swagger:
 
