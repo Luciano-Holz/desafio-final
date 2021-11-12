@@ -2,7 +2,8 @@ const CarSchema = require('../schema/CarSchema');
 
 class CarRepository {
   async create(payload) {
-    return CarSchema.create(payload);
+    const result = await CarSchema.create(payload);
+    return result;
   }
 
   async getAll(queryParams) {
