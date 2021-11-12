@@ -8,7 +8,7 @@ class PeopleController {
       return res.status(201).json(serialize(result));
     } catch (error) {
       if (error.code === 11000) {
-        res.status(400).json({
+        return res.status(400).json({
           description: 'Conflict',
           name: `${Object.keys(error.keyValue)} ${Object.values(error.keyValue)} already in use`
         });
