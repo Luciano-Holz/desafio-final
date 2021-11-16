@@ -1,18 +1,8 @@
 const request = require('supertest');
 
 const app = require('../../src/app');
-const rentalSchema = require('../../src/app/schema/RentalSchema');
 
 describe('API :: POST :: /rental', () => {
-  afterAll(async () => {
-    await rentalSchema.deleteMany();
-  });
-  beforeAll(async () => {
-    await rentalSchema.deleteMany();
-  });
-  beforeEach(async () => {
-    await rentalSchema.deleteMany();
-  });
   describe('', () => {
     let result;
     let fakerRental;

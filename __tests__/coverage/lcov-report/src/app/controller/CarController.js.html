@@ -125,29 +125,20 @@
 <a name='L66'></a><a href='#L66'>66</a>
 <a name='L67'></a><a href='#L67'>67</a>
 <a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<a name='L69'></a><a href='#L69'>69</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,16 +148,6 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -192,7 +173,26 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { paginateSerialize, serialize } = require('../serialize/CarSerialize');
 const CarService = require('../service/CarService');
 &nbsp;
@@ -208,7 +208,7 @@ class CarController {
           name: `${Object.keys(error.keyValue)} ${Object.values(error.keyValue)} already in use`
         });
       }
-<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ description: error.path, name: error.message });</span>
+<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ name: error.path, description: error.message });</span>
     }
   }
 &nbsp;
@@ -217,7 +217,7 @@ class CarController {
       const result = await CarService.getAll(req.query);
       return res.status(200).json(paginateSerialize(result));
     } catch (error) {
-<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ description: error.path, name: error.message });</span>
+<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ name: error.path, description: error.message });</span>
     }
   }
 &nbsp;
@@ -226,7 +226,7 @@ class CarController {
       const result = await CarService.getById(req.params._id);
       return res.status(200).json(serialize(result));
     } catch (error) {
-<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ description: error.path, name: error.message });</span>
+<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ name: error.path, description: error.message });</span>
     }
   }
 &nbsp;
@@ -236,7 +236,7 @@ class CarController {
       const result = <span class="cstat-no" title="statement not covered" >await CarService.update(_id, req.body);</span>
 <span class="cstat-no" title="statement not covered" >      return res.status(200).json(serialize(result));</span>
     } catch (error) {
-<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ description: error.path, name: error.message });</span>
+<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ name: error.path, description: error.message });</span>
     }
   }
 &nbsp;
@@ -245,7 +245,7 @@ class CarController {
       await CarService.delete(req.params._id);
       return res.status(204).end();
     } catch (error) {
-<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ description: error.path, name: error.message });</span>
+<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ name: error.path, description: error.message });</span>
     }
   }
 &nbsp;
@@ -255,7 +255,7 @@ class CarController {
       const result = <span class="cstat-no" title="statement not covered" >await CarService.patch(_id, _idAcessorio, req.body);</span>
 <span class="cstat-no" title="statement not covered" >      return res.status(200).json(serialize(result));</span>
     } catch (error) {
-<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ description: error.path, name: error.message });</span>
+<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ name: error.path, description: error.message });</span>
     }
   }
 }
@@ -268,7 +268,7 @@ module.exports = new CarController();
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Nov 16 2021 09:32:19 GMT-0300 (GMT-03:00)
+                at Tue Nov 16 2021 20:31:25 GMT-0300 (GMT-03:00)
             </div>
         </div>
         <script src="../../../prettify.js"></script>
