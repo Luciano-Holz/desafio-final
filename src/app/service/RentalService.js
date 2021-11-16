@@ -46,20 +46,27 @@ class RentalService {
   }
 
   async update(_id, payload) {
-    const viaCep = await ViacepRepository.viaCep(payload.endereco[0].cep);
-    const { cep, logradouro, complemento, bairro, localidade, uf } = viaCep;
-    payload.endereco = [
-      {
-        cep,
-        logradouro,
-        number: payload.endereco[0].number,
-        complemento,
-        bairro,
-        localidade,
-        uf,
-        isFilial: payload.endereco[0].isFilial
+    if (!validateCnpj(payload)) throw new CnpjInvalid(payload.cnpj);
+    for (let i = 0; i < payload.endereco.length; i++) {
+      // eslint-disable-next-line no-await-in-loop
+      const viaCep = await ViacepRepository.viaCep(payload.endereco[i].cep);
+      const { logradouro, complemento, bairro, localidade, uf } = viaCep;
+      payload.endereco[i].logradouro = logradouro;
+      payload.endereco[i].complemento = complemento;
+      payload.endereco[i].bairro = bairro;
+      payload.endereco[i].localidade = localidade;
+      payload.endereco[i].uf = uf;
+    }
+
+    let newEndereco = 0;
+    payload.endereco.forEach((endereco) => {
+      if (!endereco.isFilial) {
+        newEndereco += 1;
       }
-    ];
+      if (newEndereco > 1) {
+        throw new IsFilialExists();
+      }
+    });
     const result = await RentalRepository.update(_id, payload);
     if (!result) throw new RentalNotFound();
     return result;
