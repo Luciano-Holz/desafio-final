@@ -1,8 +1,8 @@
 class IdInvalid extends Error {
   constructor(id) {
     super();
+    this.name = 'id';
     this.message = `Id: ${id} is Invalid.`;
-    this.idErro = 1;
   }
 }
 
