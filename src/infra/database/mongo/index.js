@@ -1,12 +1,18 @@
 const mongoose = require('mongoose');
 
+const config = require('../../../app/config/config');
+
 class Database {
   constructor() {
     this.connect();
   }
 
   connect() {
-    return mongoose.connect('mongodb://localhost:27017/final_challenge');
+    return mongoose.connect(config.database.DB_CONNECTION);
+  }
+
+  disconnect() {
+    return mongoose.connection.close();
   }
 }
 
