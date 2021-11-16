@@ -13,7 +13,7 @@ class UserController {
 
       const { _id, nome, cpf, data_nascimento, senha, createdAt, __v, ...authentication } = result.toObject();
       const generateToken = (params = {}) => jwt.sign(params, authConfig.secret, { expiresIn: 86400 });
-      return res.status(201).json({
+      return res.status(200).json({
         authentication,
         token: generateToken({
           id: authentication._id,
