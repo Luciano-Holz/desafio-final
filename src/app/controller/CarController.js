@@ -13,7 +13,7 @@ class CarController {
           name: `${Object.keys(error.keyValue)} ${Object.values(error.keyValue)} already in use`
         });
       }
-      return res.status(400).json({ description: error.path, name: error.message });
+      return res.status(400).json({ name: error.path, description: error.message });
     }
   }
 
@@ -22,7 +22,7 @@ class CarController {
       const result = await CarService.getAll(req.query);
       return res.status(200).json(paginateSerialize(result));
     } catch (error) {
-      return res.status(400).json({ description: error.path, name: error.message });
+      return res.status(400).json({ name: error.path, description: error.message });
     }
   }
 
@@ -31,7 +31,7 @@ class CarController {
       const result = await CarService.getById(req.params._id);
       return res.status(200).json(serialize(result));
     } catch (error) {
-      return res.status(400).json({ description: error.path, name: error.message });
+      return res.status(400).json({ name: error.path, description: error.message });
     }
   }
 
@@ -41,7 +41,7 @@ class CarController {
       const result = await CarService.update(_id, req.body);
       return res.status(200).json(serialize(result));
     } catch (error) {
-      return res.status(400).json({ description: error.path, name: error.message });
+      return res.status(400).json({ name: error.path, description: error.message });
     }
   }
 
@@ -50,7 +50,7 @@ class CarController {
       await CarService.delete(req.params._id);
       return res.status(204).end();
     } catch (error) {
-      return res.status(400).json({ description: error.path, name: error.message });
+      return res.status(400).json({ name: error.path, description: error.message });
     }
   }
 
@@ -60,7 +60,7 @@ class CarController {
       const result = await CarService.patch(_id, _idAcessorio, req.body);
       return res.status(200).json(serialize(result));
     } catch (error) {
-      return res.status(400).json({ description: error.path, name: error.message });
+      return res.status(400).json({ name: error.path, description: error.message });
     }
   }
 }
