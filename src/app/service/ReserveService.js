@@ -20,6 +20,11 @@ class ReserveService {
     const result = await ReserveRepository.update(_id, payload);
     return result;
   }
+
+  async delete(_id) {
+    const result = await ReserveRepository.delete(_id);
+    return result;
+  }
 }
 
 module.exports = new ReserveService();

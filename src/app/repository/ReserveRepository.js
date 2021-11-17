@@ -28,6 +28,11 @@ class ReserveRepository {
     const result = await ReserveSchema.findByIdAndUpdate({ _id }, payload, { new: true });
     return result;
   }
+
+  async delete(_id) {
+    const result = await ReserveSchema.findByIdAndDelete({ _id });
+    return result;
+  }
 }
 
 module.exports = new ReserveRepository();
