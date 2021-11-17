@@ -5,10 +5,10 @@ let BearerToken = null;
 beforeAll(async () => {
   const fakerPeople = {
     nome: 'Fulano de Tal',
-    cpf: '035.891.820-08',
-    data_nascimento: '07/06/2001',
-    email: 'luciano@example.com',
-    senha: '123456',
+    cpf: '521.111.840-55',
+    data_nascimento: '04/01/1995',
+    senha: '1234567',
+    email: 'fulano@example.com',
     habilitado: 'sim'
   };
   await request(app).post('/api/v1/people/').send(fakerPeople);
