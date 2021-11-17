@@ -15,6 +15,11 @@ class ReserveService {
     const result = await ReserveRepository.getById(_id);
     return result;
   }
+
+  async update(_id, payload) {
+    const result = await ReserveRepository.update(_id, payload);
+    return result;
+  }
 }
 
 module.exports = new ReserveService();

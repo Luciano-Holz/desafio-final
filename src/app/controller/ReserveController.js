@@ -28,6 +28,16 @@ class ReserveController {
       return res.status(400).json({ name: error.path, description: error.message });
     }
   }
+
+  async update(req, res) {
+    try {
+      const { _id } = req.params;
+      const result = await ReserveService.update(_id, req.body);
+      return res.status(200).json(serialize(result));
+    } catch (error) {
+      return res.status(400).json({ name: error.path, description: error.message });
+    }
+  }
 }
 
 module.exports = new ReserveController();

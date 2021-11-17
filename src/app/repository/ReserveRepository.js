@@ -23,6 +23,11 @@ class ReserveRepository {
     const result = await ReserveSchema.findById({ _id });
     return result;
   }
+
+  async update(_id, payload) {
+    const result = await ReserveSchema.update({ _id }, payload);
+    return result;
+  }
 }
 
 module.exports = new ReserveRepository();
