@@ -25,7 +25,7 @@ class ReserveRepository {
   }
 
   async update(_id, payload) {
-    const result = await ReserveSchema.update({ _id }, payload);
+    const result = await ReserveSchema.findByIdAndUpdate({ _id }, payload, { new: true });
     return result;
   }
 }

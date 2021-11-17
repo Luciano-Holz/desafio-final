@@ -25,7 +25,7 @@ class PeopleRepository {
   }
 
   async update(_id, payload) {
-    const result = await PeopleSchema.findByIdAndUpdate({ _id }, payload);
+    const result = await PeopleSchema.findByIdAndUpdate({ _id }, payload, { new: true });
     return result;
   }
 
