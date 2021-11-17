@@ -18,6 +18,11 @@ class ReserveRepository {
     );
     return result;
   }
+
+  async getById(_id) {
+    const result = await ReserveSchema.findById({ _id });
+    return result;
+  }
 }
 
 module.exports = new ReserveRepository();
