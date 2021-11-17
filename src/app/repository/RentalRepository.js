@@ -2,7 +2,8 @@ const RentalSchema = require('../schema/RentalSchema');
 
 class RentalRepository {
   async create(payload) {
-    return RentalSchema.create(payload);
+    const result = RentalSchema.create(payload);
+    return result;
   }
 
   async getAll(queryParams) {
