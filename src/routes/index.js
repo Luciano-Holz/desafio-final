@@ -3,6 +3,7 @@ const car = require('./car.router');
 const people = require('./people.router');
 const auth = require('./authenticator.router');
 const rental = require('./rental.router');
+const reserve = require('./reserve.router');
 const swagger = require('./swagger.router');
 
 module.exports = (server) => {
@@ -11,6 +12,7 @@ module.exports = (server) => {
     people(server, new Router());
     auth(server, new Router());
     rental(server, new Router());
+    reserve(server, new Router());
     swagger(server, new Router());
     next();
   });
