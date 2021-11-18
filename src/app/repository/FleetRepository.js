@@ -28,6 +28,11 @@ class FleetRepository {
     const result = await FleetSchema.findByIdAndUpdate({ _id }, payload, { new: true });
     return result;
   }
+
+  async delete(_id) {
+    const result = await FleetSchema.findByIdAndDelete({ _id });
+    return result;
+  }
 }
 
 module.exports = new FleetRepository();

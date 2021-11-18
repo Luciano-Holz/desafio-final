@@ -20,6 +20,11 @@ class FleetService {
     const result = await FleetRepository.update(_id, payload);
     return result;
   }
+
+  async delete(_id) {
+    const result = await FleetRepository.delete(_id);
+    return result;
+  }
 }
 
 module.exports = new FleetService();

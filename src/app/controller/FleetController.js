@@ -39,6 +39,15 @@ class FleetController {
       return res.status(400).json({ name: error.path, description: error.message });
     }
   }
+
+  async delete(req, res) {
+    try {
+      await FleetService.delete(req.params._id);
+      return res.status(204).end();
+    } catch (error) {
+      return res.status(400).json({ name: error.path, description: error.message });
+    }
+  }
 }
 
 module.exports = new FleetController();
