@@ -4,7 +4,8 @@ const ReserveService = require('../service/ReserveService');
 class ReserveController {
   async create(req, res) {
     try {
-      const result = await ReserveService.create(req.body);
+      const { _id } = req.params;
+      const result = await ReserveService.create(_id, req.body);
       return res.status(201).json(serialize(result));
     } catch (error) {
       return res.status(400).json({ name: error.path, description: error.message });

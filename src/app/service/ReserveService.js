@@ -1,8 +1,8 @@
 const ReserveRepository = require('../repository/ReserveRepository');
 
 class ReserveService {
-  async create(payload) {
-    const result = await ReserveRepository.create(payload);
+  async create(_id, payload) {
+    const result = await ReserveRepository.create(_id, payload);
     return result;
   }
 

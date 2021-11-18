@@ -1,8 +1,8 @@
 const ReserveSchema = require('../schema/ReserveSchema');
 
 class ReserveRepository {
-  async create(payload) {
-    const result = await ReserveSchema.create(payload);
+  async create(_id, payload) {
+    const result = await ReserveSchema.create(_id, payload);
     return result;
   }
 
