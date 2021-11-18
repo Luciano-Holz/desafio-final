@@ -10,6 +10,11 @@ class FleetService {
     const result = await FleetRepository.getAll(queryParams);
     return result;
   }
+
+  async getById(_id) {
+    const result = await FleetRepository.getById(_id);
+    return result;
+  }
 }
 
 module.exports = new FleetService();

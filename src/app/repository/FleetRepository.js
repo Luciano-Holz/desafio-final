@@ -18,6 +18,11 @@ class FleetRepository {
     );
     return result;
   }
+
+  async getById(_id) {
+    const result = await FleetSchema.findById({ _id });
+    return result;
+  }
 }
 
 module.exports = new FleetRepository();
