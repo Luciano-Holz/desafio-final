@@ -44,14 +44,6 @@ class PeopleService {
     const dataT = moment().diff(formatData, 'years');
     if (dataT < 18) throw Error('age under 18 years');
     payload.data_nascimento = formatData;
-    const checkCpf = await PeopleRepository.getAll({ cpf: payload.cpf });
-    if (checkCpf.docs.length > 0) {
-      throw new CpfIsRegisted();
-    }
-    const checkEmail = await PeopleRepository.getAll({ email: payload.email });
-    if (checkEmail.docs.length > 0) {
-      throw new EmailIsRegisted();
-    }
     const result = PeopleRepository.update(_id, payload);
     if (!result) throw new PeopleIdInvalid();
     return result;
