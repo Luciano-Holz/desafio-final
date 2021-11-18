@@ -11,8 +11,8 @@ class ReserveService {
     return result;
   }
 
-  async getById(_id) {
-    const result = await ReserveRepository.getById(_id);
+  async getById(_id, _idReserve) {
+    const result = await ReserveRepository.getById(_id, _idReserve);
     return result;
   }
 

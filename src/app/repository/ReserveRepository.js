@@ -2,7 +2,7 @@ const ReserveSchema = require('../schema/ReserveSchema');
 
 class ReserveRepository {
   async create(_id, payload) {
-    const result = await ReserveSchema.create(_id, payload);
+    const result = await ReserveSchema.create(payload);
     return result;
   }
 
@@ -19,8 +19,8 @@ class ReserveRepository {
     return result;
   }
 
-  async getById(_id) {
-    const result = await ReserveSchema.findById({ _id });
+  async getById(_id, _idReserve) {
+    const result = await ReserveSchema.findById({ _id: _idReserve });
     return result;
   }
 
