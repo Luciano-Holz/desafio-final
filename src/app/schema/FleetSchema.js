@@ -12,11 +12,6 @@ const FleetSchema = mongoose.Schema(
       type: String,
       required: true
     },
-    id_locacao: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'reserve',
-      required: true
-    },
     valor_diaria: {
       type: Number,
       required: true
@@ -33,7 +28,7 @@ const FleetSchema = mongoose.Schema(
   },
   {
     timestamps: true,
-    collection: 'reserve'
+    collection: 'fleet'
   }
 );
 
