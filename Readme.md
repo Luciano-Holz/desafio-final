@@ -63,7 +63,7 @@ npm install
 
 ##  Using <API Locadora Compassolisa>
 
-To run locally <API Locadora Compassolisa>:
+To run locally <API Locadora Compassolisa>
 
 Run as user:
 
@@ -86,4 +86,10 @@ To use API with swagger:
 
 ```
 http://127.0.0.1:3000/api/v1/api-docs
+```
+
+##  Status <API Locadora Compassolisa>
+
+```
+in development
 ```
