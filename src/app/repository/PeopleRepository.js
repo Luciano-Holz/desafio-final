@@ -6,8 +6,8 @@ class PeopleRepository extends Repository {
     super(PeopleSchema);
   }
 
-  async auth({ email, senha }) {
-    const result = await PeopleSchema.findOne({ email, senha });
+  async auth(email) {
+    const result = await PeopleSchema.findOne({ email });
     return result;
   }
 }
