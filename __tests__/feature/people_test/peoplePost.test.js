@@ -38,7 +38,7 @@ describe('API :: POST :: /people', () => {
     });
   });
 
-  it('should return status 201', async () => {
+  it('Should return status 201', async () => {
     const { status } = await request(app).post('/api/v1/people/').send(fakerPeople);
     expect(status).toBe(201);
   });
