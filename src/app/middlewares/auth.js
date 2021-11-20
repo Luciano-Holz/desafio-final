@@ -1,21 +1,27 @@
 const jwt = require('jsonwebtoken');
-const authConfig = require('../config/auth.json');
+const dotenv = require('dotenv');
 
-module.exports = (req, res, next) => {
-  const authReader = req.headers.authorization;
-  if (!authReader) return res.status(401).send({ error: 'No token provided.' });
+dotenv.config();
 
-  const parts = authReader.split(' ');
-  if (!parts.length === 2) return res.status(401).send({ error: 'Token error.' });
+const authenticate = async (req, res, next) => {
+  try {
+    const authReader = req.headers.authorization;
+    if (!authReader) return res.status(401).send({ error: 'No token provided.' });
 
-  const [scheme, token] = parts;
-  if (!/^Bearer$/i.test(scheme)) return res.status(401).send({ error: 'Token malformatted' });
+    const parts = authReader.split(' ');
+    if (parts.length !== 2) return res.status(401).send({ error: 'Token error.' });
 
-  jwt.verify(token, authConfig.secret, (err, decoded) => {
-    if (err) return res.status(401).send({ error: 'Token Invalid' });
-
-    req.userId = decoded._id;
+    const [, token] = parts;
+    jwt.verify(token, process.env.API_SECRET);
     return next();
-  });
-  return authReader;
+  } catch (error) {
+    return res.status(401).json(
+      error.details.map((detail) => ({
+        name: detail.path.join('.'),
+        description: detail.message
+      }))
+    );
+  }
 };
+
+module.exports = authenticate;
