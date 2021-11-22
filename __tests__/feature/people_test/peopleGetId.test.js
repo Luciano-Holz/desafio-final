@@ -57,7 +57,6 @@ describe('Should do not get a person by _id', () => {
   it('Should return status 400 with errors if _id is invalid', async () => {
     const _id = '61718ad8c7cc0116a68800a6';
     const { body } = await request(app).get(`/api/v1/people/${_id}`);
-    console.log(body);
 
     expect(body.name).toBe('id');
     expect(body.description).toBe('Id 61718ad8c7cc0116a68800a6 is invalid');
@@ -67,7 +66,6 @@ describe('Should do not get a person by _id', () => {
     const id = '61718ad8c7cc0116a68800a6';
 
     const { body } = await request(app).get(`/api/v1/people/${id}`);
-    console.log(body);
 
     expect(body).toEqual({
       name: expect.any(String),
