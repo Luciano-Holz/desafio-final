@@ -56,7 +56,7 @@ describe('API :: AUTHENTICATE :: /authenticate', () => {
 });
 
 describe('API :: AUTHENTICATE :: /people', () => {
-  it('Should return a body with error email invalid', async () => {
+  it('Should return a body with error invalid email', async () => {
     const credentialsFakerPeople = {
       email: 'ciclano@example.com',
       senha: '1234567'
@@ -68,7 +68,7 @@ describe('API :: AUTHENTICATE :: /people', () => {
     expect(body.description).toBe('Email do not exists in database');
   });
 
-  it('Should return a body with token string', async () => {
+  it('Should return a body with error email invalid', async () => {
     const credentialsFakerPeople = {
       email: 'ciclano@example.com',
       senha: '1234567'
@@ -90,5 +90,43 @@ describe('API :: AUTHENTICATE :: /people', () => {
 
     const { status } = await request(app).post('/api/v1/authenticate/').send(credentialsFakerPeople);
     expect(status).toBe(404);
+  });
+});
+
+describe('API :: AUTHENTICATE :: /people', () => {
+  it('Should return a body with error incorrect senha', async () => {
+    const credentialsFakerPeople = {
+      email: 'fulano@example.com',
+      senha: '123senha'
+    };
+
+    const { body } = await request(app).post('/api/v1/authenticate/').send(credentialsFakerPeople);
+
+    expect(body.name).toBe('senha');
+    expect(body.description).toBe('Senha is incorrect.');
+  });
+
+  it('Should return a body with string errors', async () => {
+    const credentialsFakerPeople = {
+      email: 'fulano@example.com',
+      senha: '123senha'
+    };
+
+    const { body } = await request(app).post('/api/v1/authenticate/').send(credentialsFakerPeople);
+
+    expect(body).toEqual({
+      name: expect.any(String),
+      description: expect.any(String)
+    });
+  });
+
+  it('should return status 400', async () => {
+    const credentialsFakerPeople = {
+      email: 'fulano@example.com',
+      senha: '123senha'
+    };
+
+    const { status } = await request(app).post('/api/v1/authenticate/').send(credentialsFakerPeople);
+    expect(status).toBe(400);
   });
 });
