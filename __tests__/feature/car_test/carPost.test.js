@@ -39,7 +39,6 @@ describe('API :: POST :: /car', () => {
     const { body } = await request(app)
       .post('/api/v1/car/')
       .set('Authorization', `Bearer ${BearerToken}`)
-      .send(fakerCar)
       .send(fakerCar);
 
     expect(body).toHaveProperty('_id');
@@ -64,11 +63,6 @@ describe('API :: POST :: /car', () => {
       acessorios: expect.any(Array),
       quantidadePassageiros: expect.any(Number)
     });
-    const { status } = await request(app)
-      .post('/api/v1/car/')
-      .set('Authorization', `Bearer ${BearerToken}`)
-      .send(fakerCar);
-    expect(status).toBe(201);
   });
 
   it('Should return status code 201', async () => {
@@ -77,5 +71,91 @@ describe('API :: POST :: /car', () => {
       .set('Authorization', `Bearer ${BearerToken}`)
       .send(fakerCar);
     expect(status).toBe(201);
+  });
+});
+
+describe('Should do not create a car with modelo space empty', () => {
+  beforeEach(async () => {
+    fakerCar = {
+      modelo: ' ',
+      cor: 'Prata',
+      ano: 2013,
+      acessorios: [{ descricao: 'Ar-condicionado' }],
+      quantidadePassageiros: 5
+    };
+  });
+
+  it('Sould return a body with errors if space modelo is empty', async () => {
+    const { body } = await request(app)
+      .post('/api/v1/car/')
+      .set('Authorization', `Bearer ${BearerToken}`)
+      .send(fakerCar);
+
+    expect(body[0].name).toBe('modelo');
+    expect(body[0].description).toBe('"modelo" is not allowed to be empty');
+  });
+
+  it('Should return a body with values type String', async () => {
+    const { body } = await request(app)
+      .post('/api/v1/car/')
+      .set('Authorization', `Bearer ${BearerToken}`)
+      .send(fakerCar);
+
+    expect(body[0]).toEqual({
+      name: expect.any(String),
+      description: expect.any(String)
+    });
+  });
+
+  it('Should return status code 400', async () => {
+    const { status } = await request(app)
+      .post('/api/v1/car/')
+      .set('Authorization', `Bearer ${BearerToken}`)
+      .send(fakerCar);
+
+    expect(status).toBe(400);
+  });
+});
+
+describe('Should do not create a car with cor space empty', () => {
+  beforeEach(async () => {
+    fakerCar = {
+      modelo: 'Fiat Pulse',
+      cor: ' ',
+      ano: 2022,
+      acessorios: [{ descricao: 'Ar-condicionado' }],
+      quantidadePassageiros: 5
+    };
+  });
+
+  it('Sould return a body with errors if space cor is empty', async () => {
+    const { body } = await request(app)
+      .post('/api/v1/car/')
+      .set('Authorization', `Bearer ${BearerToken}`)
+      .send(fakerCar);
+
+    expect(body[0].name).toBe('cor');
+    expect(body[0].description).toBe('"cor" is not allowed to be empty');
+  });
+
+  it('Should return a body with values type String', async () => {
+    const { body } = await request(app)
+      .post('/api/v1/car/')
+      .set('Authorization', `Bearer ${BearerToken}`)
+      .send(fakerCar);
+
+    expect(body[0]).toEqual({
+      name: expect.any(String),
+      description: expect.any(String)
+    });
+  });
+
+  it('Should return status code 400', async () => {
+    const { status } = await request(app)
+      .post('/api/v1/car/')
+      .set('Authorization', `Bearer ${BearerToken}`)
+      .send(fakerCar);
+
+    expect(status).toBe(400);
   });
 });
