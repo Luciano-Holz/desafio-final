@@ -28,7 +28,7 @@ describe('API :: GET :: /people', () => {
     expect(people[0].habilitado).toBe(fakerPeople.habilitado);
   });
 
-  it('Should return a body with values type string', async () => {
+  it('Should return a body Array people with values type string', async () => {
     await request(app).post('/api/v1/people/').send(fakerPeople);
 
     const { body } = await request(app).get('/api/v1/people/');
