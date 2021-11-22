@@ -4,8 +4,6 @@ module.exports = async (req, res, next) => {
   try {
     const schema = Joi.object({
       _id: Joi.string()
-        .min(24)
-        .max(24)
         .pattern(/^[0-9a-fA-F]{24}$/)
         .required()
     });
@@ -16,8 +14,8 @@ module.exports = async (req, res, next) => {
   } catch (error) {
     return res.status(400).json(
       error.details.map((detail) => ({
-        description: detail.message,
-        name: detail.path.join('.')
+        name: detail.path.join('.'),
+        description: detail.message
       }))
     );
   }
