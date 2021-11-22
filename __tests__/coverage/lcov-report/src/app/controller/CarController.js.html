@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">9.67% </span>
+                <span class="strong">20.68% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/31</span>
+                <span class='fraction'>6/29</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">16.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>1/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">9.67% </span>
+                <span class="strong">20.68% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/31</span>
+                <span class='fraction'>6/29</span>
             </div>
         
             
@@ -119,26 +119,14 @@
 <a name='L60'></a><a href='#L60'>60</a>
 <a name='L61'></a><a href='#L61'>61</a>
 <a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L63'></a><a href='#L63'>63</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -192,23 +180,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { paginateSerialize, serialize } = require('../serialize/CarSerialize');
 const CarService = require('../service/CarService');
 &nbsp;
 class CarController {
-<span class="fstat-no" title="function not covered" >  as</span>ync create(req, res) {
-<span class="cstat-no" title="statement not covered" >    try {</span>
-      const result = <span class="cstat-no" title="statement not covered" >await CarService.create(req.body);</span>
-<span class="cstat-no" title="statement not covered" >      return res.status(201).json(serialize(result));</span>
-    } catch (error) {
-<span class="cstat-no" title="statement not covered" >      if (error.code === 11000) {</span>
-<span class="cstat-no" title="statement not covered" >        return res.status(400).json({</span>
-          description: 'Conflict',
-          name: `${Object.keys(error.keyValue)} ${Object.values(error.keyValue)} already in use`
-        });
-      }
-<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ name: error.path, description: error.message });</span>
+  async create(req, res) {
+    try {
+      const result = await CarService.create(req.body);
+      return res.status(201).json(serialize(result));
+    } catch ({ name, description, status }) {
+<span class="cstat-no" title="statement not covered" >      return res.status(status).json({ name, description });</span>
     }
   }
 &nbsp;
@@ -216,8 +198,8 @@ class CarController {
 <span class="cstat-no" title="statement not covered" >    try {</span>
       const result = <span class="cstat-no" title="statement not covered" >await CarService.getAll(req.query);</span>
 <span class="cstat-no" title="statement not covered" >      return res.status(200).json(paginateSerialize(result));</span>
-    } catch (error) {
-<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ name: error.path, description: error.message });</span>
+    } catch ({ name, description, status }) {
+<span class="cstat-no" title="statement not covered" >      return res.status(status).json({ name, description });</span>
     }
   }
 &nbsp;
@@ -225,8 +207,8 @@ class CarController {
 <span class="cstat-no" title="statement not covered" >    try {</span>
       const result = <span class="cstat-no" title="statement not covered" >await CarService.getById(req.params._id);</span>
 <span class="cstat-no" title="statement not covered" >      return res.status(200).json(serialize(result));</span>
-    } catch (error) {
-<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ name: error.path, description: error.message });</span>
+    } catch ({ name, description, status }) {
+<span class="cstat-no" title="statement not covered" >      return res.status(status).json({ name, description });</span>
     }
   }
 &nbsp;
@@ -235,8 +217,8 @@ class CarController {
       const { _id } = <span class="cstat-no" title="statement not covered" >req.params;</span>
       const result = <span class="cstat-no" title="statement not covered" >await CarService.update(_id, req.body);</span>
 <span class="cstat-no" title="statement not covered" >      return res.status(200).json(serialize(result));</span>
-    } catch (error) {
-<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ name: error.path, description: error.message });</span>
+    } catch ({ name, description, status }) {
+<span class="cstat-no" title="statement not covered" >      return res.status(status).json({ name, description });</span>
     }
   }
 &nbsp;
@@ -244,8 +226,8 @@ class CarController {
 <span class="cstat-no" title="statement not covered" >    try {</span>
 <span class="cstat-no" title="statement not covered" >      await CarService.delete(req.params._id);</span>
 <span class="cstat-no" title="statement not covered" >      return res.status(204).end();</span>
-    } catch (error) {
-<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ name: error.path, description: error.message });</span>
+    } catch ({ name, description, status }) {
+<span class="cstat-no" title="statement not covered" >      return res.status(status).json({ name, description });</span>
     }
   }
 &nbsp;
@@ -254,8 +236,8 @@ class CarController {
       const { _id, _idAcessorio } = <span class="cstat-no" title="statement not covered" >req.params;</span>
       const result = <span class="cstat-no" title="statement not covered" >await CarService.patch(_id, _idAcessorio, req.body);</span>
 <span class="cstat-no" title="statement not covered" >      return res.status(200).json(serialize(result));</span>
-    } catch (error) {
-<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ name: error.path, description: error.message });</span>
+    } catch ({ name, description, status }) {
+<span class="cstat-no" title="statement not covered" >      return res.status(status).json({ name, description });</span>
     }
   }
 }
@@ -268,7 +250,7 @@ module.exports = new CarController();
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Nov 22 2021 10:23:07 GMT-0300 (GMT-03:00)
+                at Mon Nov 22 2021 11:30:28 GMT-0300 (GMT-03:00)
             </div>
         </div>
         <script src="../../../prettify.js"></script>
