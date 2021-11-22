@@ -21,8 +21,8 @@ module.exports = async (req, res, next) => {
   } catch (error) {
     return res.status(400).json(
       error.details.map((detail) => ({
-        description: detail.message,
-        name: detail.path.join('.')
+        name: detail.path.join('.'),
+        description: detail.message
       }))
     );
   }
