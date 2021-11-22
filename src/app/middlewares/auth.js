@@ -5,7 +5,7 @@ dotenv.config();
 
 const authenticate = async (req, res, next) => {
   try {
-    const authReader = req.headers.Authorization;
+    const authReader = req.headers.authorization;
     if (!authReader) return res.status(401).send({ name: 'Token', message: 'Token not provided.' });
 
     const parts = authReader.split(' ');
