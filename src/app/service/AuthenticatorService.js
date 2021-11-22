@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 const dotenv = require('dotenv');
 const NotFound = require('../errors/NotFound');
 const PeopleRepository = require('../repository/PeopleRepository');
+const BadRequest = require('../errors/BadRequest');
 
 dotenv.config();
 
@@ -13,7 +14,7 @@ class AuthenticatorService {
 
     if (!people) throw new NotFound('email', 'Email do not exists in database');
 
-    if (!(await bcrypt.compare(senha, people.senha))) throw new NotFound('senha', 'Senha is incorrect.');
+    if (!(await bcrypt.compare(senha, people.senha))) throw new BadRequest('senha', 'Senha is incorrect.');
 
     const { email, habilitado } = people;
 
