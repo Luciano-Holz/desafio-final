@@ -72,7 +72,7 @@ describe('Should get all people by their names', () => {
     result = await request(app).get(`/api/v1/people/?nome=${fakerPeople.nome}`);
   });
 
-  it('Should return a body with _id and the same properties from fakerPeople except senha', (done) => {
+  it('Should return a body with the same properties from the parameter', (done) => {
     const { body } = result;
     const { people } = body;
 
