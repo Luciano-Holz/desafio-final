@@ -1,17 +1,11 @@
 const request = require('supertest');
 const app = require('../../../src/app');
+const { PeopleDataFaker } = require('../../support/dataFaker');
 
 let BearerToken = null;
 let result = {};
 beforeAll(async () => {
-  const fakerPeople = {
-    nome: 'Beltrano de Tal',
-    cpf: '255.655.954-36',
-    data_nascimento: '08/07/1999',
-    senha: 'senha123',
-    email: 'beltrano@example.com',
-    habilitado: 'sim'
-  };
+  const fakerPeople = PeopleDataFaker();
   await request(app).post('/api/v1/people/').send(fakerPeople);
 
   result = await request(app)
