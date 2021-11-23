@@ -7,7 +7,7 @@ const generatePeopleJson = (count = 1) => {
     objs.push({
       nome: dataFaker.name(),
       cpf: dataFaker.cpf(),
-      data_nascimento: moment(dataFaker.birthday()).format('DD/MM/YYY'),
+      data_nascimento: moment(dataFaker.birthday()).format('DD/MM/YYYY'),
       email: dataFaker.email(),
       senha: dataFaker.word({ length: 6 }),
       habilitado: dataFaker.array(['sim', 'nao'])
