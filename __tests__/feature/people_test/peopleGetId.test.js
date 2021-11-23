@@ -57,7 +57,7 @@ describe('Should do not get a person by _id', () => {
     const _id = '61718ad8c7cc0116a68800a6';
     result = await request(app).get(`/api/v1/people/${_id}`);
   });
-  it('Should return status 400 with errors if _id is invalid', (done) => {
+  it('Should return error if _id is invalid', (done) => {
     const { body } = result;
 
     expect(body.name).toBe('id');
