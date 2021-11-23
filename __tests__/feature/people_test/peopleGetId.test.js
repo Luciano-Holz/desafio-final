@@ -2,9 +2,9 @@ const request = require('supertest');
 const app = require('../../../src/app');
 
 let fakerPeople = {};
-
+let result = {};
 describe('API :: GET{id} :: /people', () => {
-  beforeEach(() => {
+  beforeEach(async () => {
     fakerPeople = {
       nome: 'Fulano de Tal',
       cpf: '521.111.840-55',
@@ -13,26 +13,26 @@ describe('API :: GET{id} :: /people', () => {
       email: 'fulano@example.com',
       habilitado: 'sim'
     };
-  });
 
-  it('Should return a body with _id and the same properties from fakerPeople expect senha', async () => {
     const { text } = await request(app).post('/api/v1/people/').send(fakerPeople);
     const { _id } = JSON.parse(text);
 
-    const { body } = await request(app).get(`/api/v1/people/${_id.toString()}`);
+    result = await request(app).get(`/api/v1/people/${_id.toString()}`);
+  });
+
+  it('Should return a body with _id and the same properties from fakerPeople expect senha', (done) => {
+    const { body } = result;
 
     expect(body.nome).toBe(fakerPeople.nome);
     expect(body.cpf).toBe(fakerPeople.cpf);
     expect(body.data_nascimento).toBe(fakerPeople.data_nascimento);
     expect(body.email).toBe(fakerPeople.email);
     expect(body.habilitado).toBe(fakerPeople.habilitado);
+    done();
   });
 
-  it('Should return a object with values type string', async () => {
-    const { text } = await request(app).post('/api/v1/people/').send(fakerPeople);
-    const { _id } = JSON.parse(text);
-
-    const { body } = await request(app).get(`/api/v1/people/${_id.toString()}`);
+  it('Should return a object with values type string', (done) => {
+    const { body } = result;
 
     expect(body).toEqual({
       _id: expect.any(String),
@@ -42,41 +42,43 @@ describe('API :: GET{id} :: /people', () => {
       email: expect.any(String),
       habilitado: expect.any(String)
     });
+    done();
   });
 
-  it('Should return status code 200', async () => {
-    const { text } = await request(app).post('/api/v1/people/').send(fakerPeople);
-    const { _id } = JSON.parse(text);
-
-    const { status } = await request(app).get(`/api/v1/people/${_id.toString()}`);
+  it('Should return status code 200', (done) => {
+    const { status } = result;
     expect(status).toBe(200);
+    done();
   });
 });
 
 describe('Should do not get a person by _id', () => {
-  it('Should return status 400 with errors if _id is invalid', async () => {
+  beforeEach(async () => {
     const _id = '61718ad8c7cc0116a68800a6';
-    const { body } = await request(app).get(`/api/v1/people/${_id}`);
+    result = await request(app).get(`/api/v1/people/${_id}`);
+  });
+  it('Should return status 400 with errors if _id is invalid', (done) => {
+    const { body } = result;
 
     expect(body.name).toBe('id');
     expect(body.description).toBe('Id 61718ad8c7cc0116a68800a6 is invalid');
+    done();
   });
 
-  it('Should return a body with values type string', async () => {
-    const id = '61718ad8c7cc0116a68800a6';
-
-    const { body } = await request(app).get(`/api/v1/people/${id}`);
+  it('Should return a body with values type string', (done) => {
+    const { body } = result;
 
     expect(body).toEqual({
       name: expect.any(String),
       description: expect.any(String)
     });
+    done();
   });
 
-  it('Should return status code 400', async () => {
-    const id = '61718ad8c7cc0116a68800a6';
+  it('Should return status code 400', (done) => {
+    const { status } = result;
 
-    const { status } = await request(app).get(`/api/v1/people/${id}`);
     expect(status).toBe(400);
+    done();
   });
 });
