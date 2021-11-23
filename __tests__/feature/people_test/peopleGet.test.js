@@ -1,23 +1,18 @@
 const request = require('supertest');
 const app = require('../../../src/app');
+const { PeopleDataFaker } = require('../../support/dataFaker');
 
 let fakerPeople = {};
+let result = {};
 describe('API :: GET :: /people', () => {
-  beforeEach(() => {
-    fakerPeople = {
-      nome: 'Fulano de Tal',
-      cpf: '521.111.840-55',
-      data_nascimento: '04/01/1995',
-      senha: '123456',
-      email: 'fulano@example.com',
-      habilitado: 'sim'
-    };
+  beforeEach(async () => {
+    fakerPeople = PeopleDataFaker();
+    await request(app).post('/api/v1/people/').send(fakerPeople);
+    result = await request(app).get('/api/v1/people/');
   });
 
-  it('Should return a body with _id and the same properties from fakerPeople except senha', async () => {
-    await request(app).post('/api/v1/people/').send(fakerPeople);
-
-    const { body } = await request(app).get('/api/v1/people/');
+  it('Should return a body with _id and the same properties from fakerPeople except senha', (done) => {
+    const { body } = result;
     const { people } = body;
 
     expect(people).toHaveLength(1);
@@ -26,12 +21,11 @@ describe('API :: GET :: /people', () => {
     expect(people[0].data_nascimento).toBe(fakerPeople.data_nascimento);
     expect(people[0].email).toBe(fakerPeople.email);
     expect(people[0].habilitado).toBe(fakerPeople.habilitado);
+    done();
   });
 
-  it('Should return a body Array people with values type string', async () => {
-    await request(app).post('/api/v1/people/').send(fakerPeople);
-
-    const { body } = await request(app).get('/api/v1/people/');
+  it('Should return a body Array people with values type string', (done) => {
+    const { body } = result;
     const { people } = body;
 
     expect(people[0]).toEqual({
@@ -42,32 +36,25 @@ describe('API :: GET :: /people', () => {
       email: expect.any(String),
       habilitado: expect.any(String)
     });
+    done();
   });
 
-  it('Should return status 200', async () => {
-    await request(app).post('/api/v1/people/').send(fakerPeople);
-
-    const { status } = await request(app).get('/api/v1/people/').send(fakerPeople);
+  it('Should return status 200', (done) => {
+    const { status } = result;
     expect(status).toBe(200);
+    done();
   });
 });
 
-describe('Should get all people by theyr names', () => {
-  beforeEach(() => {
-    fakerPeople = {
-      nome: 'Fulano de Tal',
-      cpf: '521.111.840-55',
-      data_nascimento: '04/01/1995',
-      senha: '123456',
-      email: 'fulano@example.com',
-      habilitado: 'sim'
-    };
+describe('Should get all people by their names', () => {
+  beforeEach(async () => {
+    fakerPeople = PeopleDataFaker();
+    await request(app).post('/api/v1/people/').send(fakerPeople);
+    result = await request(app).get(`/api/v1/people/?nome=${fakerPeople.nome}`);
   });
 
-  it('Should return a body with _id and the same properties from fakerPeople except senha', async () => {
-    await request(app).post('/api/v1/people/').send(fakerPeople);
-
-    const { body } = await request(app).get(`/api/v1/people/?nome=${fakerPeople.nome}`);
+  it('Should return a body with _id and the same properties from fakerPeople except senha', (done) => {
+    const { body } = result;
     const { people } = body;
 
     expect(people).toHaveLength(1);
@@ -76,12 +63,11 @@ describe('Should get all people by theyr names', () => {
     expect(people[0].data_nascimento).toBe(fakerPeople.data_nascimento);
     expect(people[0].email).toBe(fakerPeople.email);
     expect(people[0].habilitado).toBe(fakerPeople.habilitado);
+    done();
   });
 
-  it('Should return a body with values type string', async () => {
-    await request(app).post('/api/v1/people/').send(fakerPeople);
-
-    const { body } = await request(app).get(`/api/v1/people/?nome=${fakerPeople.nome}`);
+  it('Should return a body with values type string', (done) => {
+    const { body } = result;
     const { people } = body;
 
     expect(people[0]).toEqual({
@@ -92,14 +78,14 @@ describe('Should get all people by theyr names', () => {
       email: expect.any(String),
       habilitado: expect.any(String)
     });
+    done();
   });
 
-  it('Should return status code 200', async () => {
-    await request(app).post('/api/v1/people/').send(fakerPeople);
-
-    const response = await request(app).get(`/api/v1/people/?nome=${fakerPeople.nome}`);
+  it('Should return status code 200', (done) => {
+    const response = result;
 
     const { status } = response;
     expect(status).toBe(200);
+    done();
   });
 });
