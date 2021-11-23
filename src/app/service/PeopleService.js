@@ -9,7 +9,7 @@ class PeopleService {
     if (!validateCpf(payload)) throw new BadRequest('Conflict', `Cpf ${payload.cpf} is invalid`);
     const formatData = moment(payload.data_nascimento, 'DD/MM/YYYY').format('YYYY-MM-DD');
     const dataT = moment().diff(formatData, 'years');
-    if (dataT < 18) throw BadRequest('data_nasimento', `Age under 18 years`);
+    if (dataT < 18) throw new BadRequest('data_nasimento', `Age under 18 years`);
     payload.data_nascimento = formatData;
 
     const checkCpf = await PeopleRepository.getAll({ cpf: payload.cpf });
