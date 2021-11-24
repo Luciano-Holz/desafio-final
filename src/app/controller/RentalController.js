@@ -6,14 +6,8 @@ class RentalController {
     try {
       const result = await RentalService.create(req.body);
       return res.status(201).json(serialize(result));
-    } catch (error) {
-      if (error.code === 11000) {
-        return res.status(400).json({
-          description: 'Conflict',
-          name: `${Object.keys(error.keyValue)} ${Object.values(error.keyValue)} already in use`
-        });
-      }
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 
@@ -21,8 +15,8 @@ class RentalController {
     try {
       const result = await RentalService.getAll(req.query);
       return res.status(200).json(paginateSerialize(result));
-    } catch (error) {
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 
@@ -30,8 +24,8 @@ class RentalController {
     try {
       const result = await RentalService.getById(req.params._id);
       return res.status(200).json(serialize(result));
-    } catch (error) {
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 
@@ -40,14 +34,8 @@ class RentalController {
       const { _id } = req.params;
       const result = await RentalService.update(_id, req.body);
       return res.status(200).json(serialize(result));
-    } catch (error) {
-      if (error.code === 11000) {
-        res.status(400).json({
-          description: 'Conflict',
-          name: `${Object.keys(error.keyValue)} ${Object.values(error.keyValue)} already in use`
-        });
-      }
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 
@@ -55,9 +43,8 @@ class RentalController {
     try {
       await RentalService.delete(req.params._id);
       return res.status(204).end();
-    } catch (error) {
-      if (error.idErro === 2) return res.status(404).json({ name: error.path, description: error.message });
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 }
