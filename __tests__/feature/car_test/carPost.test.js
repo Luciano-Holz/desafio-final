@@ -1,6 +1,7 @@
 const request = require('supertest');
 const app = require('../../../src/app');
 const { PeopleDataFaker } = require('../../support/dataFaker');
+const { CarDataFaker } = require('../../support/dataFaker');
 
 let BearerToken = null;
 let result = {};
@@ -20,13 +21,8 @@ let fakerCar = {};
 
 describe('API :: POST :: /car', () => {
   beforeEach(async () => {
-    fakerCar = {
-      modelo: 'Ford Focus',
-      cor: 'Prata',
-      ano: 2013,
-      acessorios: [{ descricao: 'Ar-condicionado' }],
-      quantidadePassageiros: 5
-    };
+    fakerCar = CarDataFaker();
+
     result = await request(app).post('/api/v1/car/').set('Authorization', `Bearer ${BearerToken}`).send(fakerCar);
   });
 
@@ -64,7 +60,7 @@ describe('API :: POST :: /car', () => {
   });
 });
 
-describe('Should do not create a car with modelo space empty', () => {
+describe('Should do not create a car with modelo field empty', () => {
   beforeEach(async () => {
     fakerCar = {
       modelo: ' ',
@@ -76,7 +72,7 @@ describe('Should do not create a car with modelo space empty', () => {
     result = await request(app).post('/api/v1/car/').set('Authorization', `Bearer ${BearerToken}`).send(fakerCar);
   });
 
-  it('Sould return a body with errors if space modelo is empty', (done) => {
+  it('Sould return a body with errors if field modelo is empty', (done) => {
     const { body } = result;
 
     expect(body[0].name).toBe('modelo');
@@ -102,7 +98,7 @@ describe('Should do not create a car with modelo space empty', () => {
   });
 });
 
-describe('Should do not create a car with cor space empty', () => {
+describe('Should do not create a car with cor field empty', () => {
   beforeEach(async () => {
     fakerCar = {
       modelo: 'Fiat Pulse',
@@ -114,7 +110,7 @@ describe('Should do not create a car with cor space empty', () => {
     result = await request(app).post('/api/v1/car/').set('Authorization', `Bearer ${BearerToken}`).send(fakerCar);
   });
 
-  it('Sould return a body with errors if space cor is empty', (done) => {
+  it('Sould return a body with errors if field cor is empty', (done) => {
     const { body } = result;
 
     expect(body[0].name).toBe('cor');
@@ -178,7 +174,7 @@ describe('Should do not create a car with year invalid', () => {
   });
 });
 
-describe('Should do not create a car with acessorios space is empty', () => {
+describe('Should do not create a car with acessorios field is empty', () => {
   beforeEach(async () => {
     fakerCar = {
       modelo: 'Fiat Pulse',
@@ -216,7 +212,7 @@ describe('Should do not create a car with acessorios space is empty', () => {
   });
 });
 
-describe('Should do not create a car with acessorios space is empty', () => {
+describe('Should do not create a car with acessorios field is empty', () => {
   beforeEach(async () => {
     fakerCar = {
       modelo: 'Fiat Pulse',
