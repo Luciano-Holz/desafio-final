@@ -51,8 +51,8 @@ describe('Should return an error id not found', () => {
     const { body } = result;
 
     expect(body).toEqual({
-      description: expect.any(String),
-      name: expect.any(String)
+      name: expect.any(String),
+      description: expect.any(String)
     });
     done();
   });
@@ -86,13 +86,13 @@ describe('Should return an error id invalid', () => {
     const { body } = result;
 
     expect(body[0]).toEqual({
-      description: expect.any(String),
-      name: expect.any(String)
+      name: expect.any(String),
+      description: expect.any(String)
     });
     done();
   });
 
-  it('Should return status code 404', (done) => {
+  it('Should return status code 400', (done) => {
     const { status } = result;
 
     expect(status).toBe(400);
