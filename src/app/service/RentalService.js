@@ -29,7 +29,7 @@ class RentalService {
         newEndereco += 1;
       }
       if (newEndereco > 1) {
-        throw new BadRequest('Conflict', 'IsFilial false is possible only one');
+        throw new BadRequest('Conflict', 'IsFilial false is possible only in one address');
       }
     });
     if (payload.endereco) {
