@@ -60,6 +60,7 @@ describe('API :: GET :: /people', () => {
 
   it('Should return status 200', (done) => {
     const { status } = result;
+
     expect(status).toBe(200);
     done();
   });
@@ -101,9 +102,8 @@ describe('Should get all people by their names', () => {
   });
 
   it('Should return status code 200', (done) => {
-    const response = result;
+    const { status } = result;
 
-    const { status } = response;
     expect(status).toBe(200);
     done();
   });
