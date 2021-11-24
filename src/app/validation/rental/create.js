@@ -10,7 +10,7 @@ module.exports = async (req, res, next) => {
       atividades: Joi.string().trim().required(),
       endereco: Joi.array().min(1).items({
         cep: Joi.string().trim().required(),
-        number: Joi.string().trim().required(),
+        number: Joi.number().required(),
         isFilial: Joi.boolean().required()
       })
     });
