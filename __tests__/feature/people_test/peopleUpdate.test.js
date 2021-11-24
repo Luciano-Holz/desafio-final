@@ -38,6 +38,7 @@ describe('API :: UPDATE :: /people', () => {
 
   it('Should return a body with values type string', (done) => {
     const { body } = result;
+
     expect(body).toEqual({
       _id: expect.any(String),
       nome: expect.any(String),
@@ -50,15 +51,14 @@ describe('API :: UPDATE :: /people', () => {
   });
 
   it('should return status 200', (done) => {
-    const response = result;
+    const { status } = result;
 
-    const { status } = response;
     expect(status).toBe(200);
     done();
   });
 });
 
-describe('Should do not create a person with nome space empty', () => {
+describe('Should do not update a person with nome field empty', () => {
   beforeEach(async () => {
     fakerPeople = {
       nome: ' ',
@@ -71,7 +71,7 @@ describe('Should do not create a person with nome space empty', () => {
     result = await request(app).post('/api/v1/people/').send(fakerPeople);
   });
 
-  it('Should return status 400 with errors if nome has spaces empty', (done) => {
+  it('Should return error if nome field is empty', (done) => {
     const { body } = result;
 
     expect(body[0].name).toBe('nome');
@@ -110,7 +110,7 @@ describe('Should do not create a person with cpf invalid', () => {
     result = await request(app).post('/api/v1/people/').send(fakerPeople);
   });
 
-  it('Should return status 400 with errors if cpf is invalid', (done) => {
+  it('Should return error if cpf is invalid', (done) => {
     const { body } = result;
 
     expect(body[0].name).toBe('cpf');
@@ -162,7 +162,7 @@ describe('Should do not create a person with a cpf already in using', () => {
     result = await request(app).post('/api/v1/people/').send(fakerPeople2);
   });
 
-  it('Should return status 400 with errors if cpf is already in use', (done) => {
+  it('Should return with error if cpf is already in use', (done) => {
     const { body } = result;
 
     expect(body.name).toBe('Conflict');
@@ -201,7 +201,7 @@ describe('Should do not create a person with data_nascimento invalid', () => {
     result = await request(app).post('/api/v1/people/').send(fakerPeople);
   });
 
-  it('Should return status 400 with errors if data_nascimento invalid', (done) => {
+  it('Should return error if data_nascimento invalid', (done) => {
     const { body } = result;
 
     expect(body[0].name).toBe('data_nascimento');
@@ -240,7 +240,7 @@ describe('Should do not create a person with senha less than 6 characteres', () 
     result = await request(app).post('/api/v1/people/').send(fakerPeople);
   });
 
-  it('Should return status 400 with errors if senha do not had min 6 characters', (done) => {
+  it('Should return error if senha do not had min 6 characters', (done) => {
     const { body } = result;
 
     expect(body[0].name).toBe('senha');
@@ -279,7 +279,7 @@ describe('Should do not create a person with email invalid', () => {
     result = await request(app).post('/api/v1/people/').send(fakerPeople);
   });
 
-  it('Should return status 400 with errors if email is invalid', (done) => {
+  it('Should return error if email is invalid', (done) => {
     const { body } = result;
 
     expect(body[0].name).toBe('email');
@@ -330,7 +330,7 @@ describe('Do not create a person with an email already in use', () => {
     result = await request(app).post('/api/v1/people/').send(fakerPeople2);
   });
 
-  it('Should return status 400 with errors if email is already using', (done) => {
+  it('Should return error if email is already using', (done) => {
     const { body } = result;
 
     expect(body.name).toBe('Conflict');
@@ -369,7 +369,7 @@ describe('Should do not create a person with habilitado different as sim or nao'
     result = await request(app).post('/api/v1/people/').send(fakerPeople);
   });
 
-  it('Should return status 400 with errors if habilitado do not is [sim, nao]', (done) => {
+  it('Should return error if habilitado do not is [sim, nao]', (done) => {
     const { body } = result;
 
     expect(body[0].name).toBe('habilitado');
