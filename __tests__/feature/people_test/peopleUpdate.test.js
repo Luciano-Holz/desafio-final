@@ -3,7 +3,6 @@ const app = require('../../../src/app');
 const { PeopleDataFaker } = require('../../support/dataFaker');
 
 let fakerPeople = {};
-let fakerPeople2 = {};
 let payload = {};
 let result = {};
 describe('API :: UPDATE :: /people', () => {

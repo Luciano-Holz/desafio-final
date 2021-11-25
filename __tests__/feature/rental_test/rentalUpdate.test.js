@@ -2,7 +2,6 @@ const request = require('supertest');
 const app = require('../../../src/app');
 
 let fakerRental = {};
-let fakerRental2 = {};
 let payload = {};
 let result = {};
 describe('API :: UPDATE :: /rental', () => {
