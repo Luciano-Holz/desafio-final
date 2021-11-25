@@ -8,17 +8,17 @@ const FleetSchema = mongoose.Schema(
       ref: 'car',
       required: true
     },
+    id_locadora: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'rental',
+      required: true
+    },
     status: {
       type: String,
       required: true
     },
     valor_diaria: {
       type: Number,
-      required: true
-    },
-    id_locadora: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'rental',
       required: true
     },
     placa: {
