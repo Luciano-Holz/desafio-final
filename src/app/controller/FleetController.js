@@ -23,7 +23,8 @@ class FleetController {
 
   async getById(req, res) {
     try {
-      const result = await FleetService.getById(req.params._id, req.params._idFleet);
+      const { _id, _idFleet } = req.params;
+      const result = await FleetService.getById(_id, _idFleet);
       return res.status(200).json(serialize(result));
     } catch ({ name, description, status }) {
       return res.status(status).json({ name, description });
@@ -42,7 +43,8 @@ class FleetController {
 
   async delete(req, res) {
     try {
-      await FleetService.delete(req.params._id);
+      const { _idFleet } = req.params;
+      await FleetService.delete(_idFleet);
       return res.status(204).end();
     } catch ({ name, description, status }) {
       return res.status(status).json({ name, description });
