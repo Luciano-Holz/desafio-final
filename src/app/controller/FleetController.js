@@ -23,7 +23,7 @@ class FleetController {
 
   async getById(req, res) {
     try {
-      const result = await FleetService.getById(req.params._id);
+      const result = await FleetService.getById(req.params._id, req.params._idFleet);
       return res.status(200).json(serialize(result));
     } catch ({ name, description, status }) {
       return res.status(status).json({ name, description });
