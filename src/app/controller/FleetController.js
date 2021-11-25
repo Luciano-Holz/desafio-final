@@ -7,8 +7,8 @@ class FleetController {
       const { _id } = req.params;
       const result = await FleetService.create(_id, req.body);
       return res.status(201).json(serialize(result));
-    } catch (error) {
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 
@@ -16,8 +16,8 @@ class FleetController {
     try {
       const result = await FleetService.getAll(req.query);
       return res.status(200).json(paginateSerialize(result));
-    } catch (error) {
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 
@@ -25,8 +25,8 @@ class FleetController {
     try {
       const result = await FleetService.getById(req.params._id);
       return res.status(200).json(serialize(result));
-    } catch (error) {
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 
@@ -35,8 +35,8 @@ class FleetController {
       const { _id } = req.params;
       const result = await FleetService.update(_id, req.body);
       return res.status(200).json(serialize(result));
-    } catch (error) {
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 
@@ -44,8 +44,8 @@ class FleetController {
     try {
       await FleetService.delete(req.params._id);
       return res.status(204).end();
-    } catch (error) {
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 }
