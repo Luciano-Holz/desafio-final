@@ -1,10 +1,9 @@
-const serialize = ({ _id, id_carro, status, id_locacao, valor_diaria, id_locadora, placa }) => ({
+const serialize = ({ _id, id_carro, id_locadora, status, valor_diaria, placa }) => ({
   _id,
   id_carro,
-  status,
-  id_locacao,
-  valor_diaria,
   id_locadora,
+  status,
+  valor_diaria,
   placa
 });
 
