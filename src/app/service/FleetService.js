@@ -1,4 +1,5 @@
 const BadRequest = require('../errors/BadRequest');
+const NotFound = require('../errors/NotFound');
 const FleetRepository = require('../repository/FleetRepository');
 
 class FleetService {
@@ -28,6 +29,9 @@ class FleetService {
 
   async delete(_id) {
     const result = await FleetRepository.delete(_id);
+    if (!result) {
+      throw new NotFound('id', `Id ${_id} not found`);
+    }
     return result;
   }
 }
