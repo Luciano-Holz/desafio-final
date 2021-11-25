@@ -44,9 +44,7 @@ class FleetService {
 
   async delete(_id) {
     const result = await FleetRepository.delete(_id);
-    if (!result) {
-      throw new NotFound('id', `Id ${_id} not found`);
-    }
+    if (!result) throw new NotFound('id', `Id ${_id} not found`);
     return result;
   }
 }
