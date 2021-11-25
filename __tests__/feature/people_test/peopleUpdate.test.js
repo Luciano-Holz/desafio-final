@@ -61,6 +61,14 @@ describe('API :: UPDATE :: /people', () => {
 describe('Should do not update a person with nome field empty', () => {
   beforeEach(async () => {
     fakerPeople = {
+      nome: 'Fulano',
+      cpf: '521.111.840-55',
+      data_nascimento: '04/01/1995',
+      senha: '1234567',
+      email: 'fulano@example.com',
+      habilitado: 'sim'
+    };
+    payload = {
       nome: ' ',
       cpf: '521.111.840-55',
       data_nascimento: '04/01/1995',
@@ -68,7 +76,10 @@ describe('Should do not update a person with nome field empty', () => {
       email: 'fulano@example.com',
       habilitado: 'sim'
     };
-    result = await request(app).post('/api/v1/people/').send(fakerPeople);
+
+    const { text } = await request(app).post('/api/v1/people/').send(fakerPeople);
+    const { _id } = JSON.parse(text);
+    result = await request(app).put(`/api/v1/people/${_id.toString()}`).send(payload);
   });
 
   it('Should return error if nome field is empty', (done) => {
@@ -101,13 +112,24 @@ describe('Should do not create a person with cpf invalid', () => {
   beforeEach(async () => {
     fakerPeople = {
       nome: 'Fulano de Tal',
-      cpf: '521.111.840',
+      cpf: '775.781.810-92',
       data_nascimento: '04/01/1995',
       senha: '1234567',
       email: 'fulano@example.com',
       habilitado: 'sim'
     };
-    result = await request(app).post('/api/v1/people/').send(fakerPeople);
+    payload = {
+      nome: 'Fulano de Tal',
+      cpf: '775.781.810',
+      data_nascimento: '04/01/1995',
+      senha: '1234567',
+      email: 'fulano@example.com',
+      habilitado: 'sim'
+    };
+
+    const { text } = await request(app).post('/api/v1/people/').send(fakerPeople);
+    const { _id } = JSON.parse(text);
+    result = await request(app).put(`/api/v1/people/${_id.toString()}`).send(payload);
   });
 
   it('Should return error if cpf is invalid', (done) => {
@@ -115,7 +137,7 @@ describe('Should do not create a person with cpf invalid', () => {
 
     expect(body[0].name).toBe('cpf');
     expect(body[0].description).toBe(
-      '"cpf" with value "521.111.840" fails to match the required pattern: /^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$/'
+      `"cpf" with value "${payload.cpf}" fails to match the required pattern: /^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$/`
     );
     done();
   });
@@ -138,59 +160,17 @@ describe('Should do not create a person with cpf invalid', () => {
   });
 });
 
-describe('Should do not create a person with a cpf already in using', () => {
+describe('Should do not create a person with data_nascimento invalid', () => {
   beforeEach(async () => {
     fakerPeople = {
       nome: 'Fulano de Tal',
       cpf: '521.111.840-55',
-      data_nascimento: '04/01/1998',
-      senha: '123456',
+      data_nascimento: '04/01/1994',
+      senha: '1234567',
       email: 'fulano@example.com',
       habilitado: 'sim'
     };
-
-    fakerPeople2 = {
-      nome: 'Ciclano de Tal',
-      cpf: '521.111.840-55',
-      data_nascimento: '04/01/1994',
-      senha: '1234567',
-      email: 'ciclano@example.com',
-      habilitado: 'nao'
-    };
-
-    await request(app).post('/api/v1/people/').send(fakerPeople);
-    result = await request(app).post('/api/v1/people/').send(fakerPeople2);
-  });
-
-  it('Should return with error if cpf is already in use', (done) => {
-    const { body } = result;
-
-    expect(body.name).toBe('Conflict');
-    expect(body.description).toBe(`Cpf ${fakerPeople2.cpf} is already in use`);
-    done();
-  });
-
-  it('Should return a body with values type string', (done) => {
-    const { body } = result;
-
-    expect(body).toEqual({
-      name: expect.any(String),
-      description: expect.any(String)
-    });
-    done();
-  });
-
-  it('Should return status code 400', (done) => {
-    const { status } = result;
-
-    expect(status).toBe(400);
-    done();
-  });
-});
-
-describe('Should do not create a person with data_nascimento invalid', () => {
-  beforeEach(async () => {
-    fakerPeople = {
+    payload = {
       nome: 'Fulano de Tal',
       cpf: '521.111.840-55',
       data_nascimento: '04/01/19',
@@ -198,7 +178,10 @@ describe('Should do not create a person with data_nascimento invalid', () => {
       email: 'fulano@example.com',
       habilitado: 'sim'
     };
-    result = await request(app).post('/api/v1/people/').send(fakerPeople);
+
+    const { text } = await request(app).post('/api/v1/people/').send(fakerPeople);
+    const { _id } = JSON.parse(text);
+    result = await request(app).put(`/api/v1/people/${_id.toString()}`).send(payload);
   });
 
   it('Should return error if data_nascimento invalid', (done) => {
@@ -233,11 +216,22 @@ describe('Should do not create a person with senha less than 6 characteres', () 
       nome: 'Fulano de Tal',
       cpf: '521.111.840-55',
       data_nascimento: '04/01/1995',
+      senha: '123senha',
+      email: 'fulano@example.com',
+      habilitado: 'sim'
+    };
+    payload = {
+      nome: 'Fulano de Tal',
+      cpf: '521.111.840-55',
+      data_nascimento: '04/01/1995',
       senha: '123',
       email: 'fulano@example.com',
       habilitado: 'sim'
     };
-    result = await request(app).post('/api/v1/people/').send(fakerPeople);
+
+    const { text } = await request(app).post('/api/v1/people/').send(fakerPeople);
+    const { _id } = JSON.parse(text);
+    result = await request(app).put(`/api/v1/people/${_id.toString()}`).send(payload);
   });
 
   it('Should return error if senha do not had min 6 characters', (done) => {
@@ -273,10 +267,21 @@ describe('Should do not create a person with email invalid', () => {
       cpf: '521.111.840-55',
       data_nascimento: '04/01/1995',
       senha: '123456',
+      email: 'fulano@example.com',
+      habilitado: 'sim'
+    };
+    payload = {
+      nome: 'Fulano de Tal',
+      cpf: '521.111.840-55',
+      data_nascimento: '04/01/1995',
+      senha: '1234567',
       email: 'fulano',
       habilitado: 'sim'
     };
-    result = await request(app).post('/api/v1/people/').send(fakerPeople);
+
+    const { text } = await request(app).post('/api/v1/people/').send(fakerPeople);
+    const { _id } = JSON.parse(text);
+    result = await request(app).put(`/api/v1/people/${_id.toString()}`).send(payload);
   });
 
   it('Should return error if email is invalid', (done) => {
@@ -305,57 +310,6 @@ describe('Should do not create a person with email invalid', () => {
   });
 });
 
-describe('Do not create a person with an email already in use', () => {
-  beforeEach(async () => {
-    fakerPeople = {
-      nome: 'Fulano de Tal',
-      cpf: '521.111.840-55',
-      data_nascimento: '04/01/1995',
-      senha: '1234567',
-      email: 'fulano@example.com',
-      habilitado: 'sim'
-    };
-
-    fakerPeople2 = {
-      nome: 'Ciclano de Tal',
-      cpf: '157.840.560-26',
-      data_nascimento: '04/01/1996',
-      senha: '123456',
-      email: 'fulano@example.com',
-      habilitado: 'nao'
-    };
-
-    await request(app).post('/api/v1/people/').send(fakerPeople);
-
-    result = await request(app).post('/api/v1/people/').send(fakerPeople2);
-  });
-
-  it('Should return error if email is already using', (done) => {
-    const { body } = result;
-
-    expect(body.name).toBe('Conflict');
-    expect(body.description).toBe(`Email ${fakerPeople2.email} is already in use`);
-    done();
-  });
-
-  it('Should return a body with values type string', (done) => {
-    const { body } = result;
-
-    expect(body).toEqual({
-      name: expect.any(String),
-      description: expect.any(String)
-    });
-    done();
-  });
-
-  it('Should return status code 400', (done) => {
-    const { status } = result;
-
-    expect(status).toBe(400);
-    done();
-  });
-});
-
 describe('Should do not create a person with habilitado different as sim or nao', () => {
   beforeEach(async () => {
     fakerPeople = {
@@ -364,9 +318,20 @@ describe('Should do not create a person with habilitado different as sim or nao'
       data_nascimento: '04/01/1995',
       senha: '123456',
       email: 'fulano@example.com',
-      habilitado: 's'
+      habilitado: 'sim'
     };
-    result = await request(app).post('/api/v1/people/').send(fakerPeople);
+    payload = {
+      nome: 'Fulano de Tal',
+      cpf: '521.111.840-55',
+      data_nascimento: '04/01/1995',
+      senha: '1234567',
+      email: 'fulano@example.com',
+      habilitado: 'talvez'
+    };
+
+    const { text } = await request(app).post('/api/v1/people/').send(fakerPeople);
+    const { _id } = JSON.parse(text);
+    result = await request(app).put(`/api/v1/people/${_id.toString()}`).send(payload);
   });
 
   it('Should return error if habilitado do not is [sim, nao]', (done) => {
