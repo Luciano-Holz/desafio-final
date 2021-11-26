@@ -34,6 +34,7 @@ class FleetService {
 
   async getById(_id, _idFleet) {
     const result = await FleetRepository.getById(_idFleet);
+    if (!result) throw new NotFound('id', `Id ${_idFleet} not found`);
     return result;
   }
 
