@@ -22,7 +22,7 @@ class Repository {
   }
 
   async getById(_id) {
-    const result = await this.schema.findById({ _id });
+    const result = await this.schema.findById({ _id }).lean();
     return result;
   }
 
