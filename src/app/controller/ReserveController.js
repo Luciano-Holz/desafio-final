@@ -33,11 +33,11 @@ class ReserveController {
 
   async update(req, res) {
     try {
-      const { _id } = req.params;
-      const result = await ReserveService.update(_id, req.body);
+      const { _id, _idReserve } = req.params;
+      const result = await ReserveService.update(_id, _idReserve, req.body);
       return res.status(200).json(serialize(result));
-    } catch (error) {
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 
