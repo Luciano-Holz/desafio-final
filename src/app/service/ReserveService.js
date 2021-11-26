@@ -32,6 +32,7 @@ class ReserveService {
 
   async getAll(queryParams) {
     const result = await ReserveRepository.getAll(queryParams);
+    if (!result) throw new NotFound('Fleet', `not found`);
     return result;
   }
 
