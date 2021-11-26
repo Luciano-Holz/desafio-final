@@ -42,8 +42,26 @@ class ReserveService {
     return result;
   }
 
-  async update(_id, payload) {
-    const result = await ReserveRepository.update(_id, payload);
+  async update(_id, _idFleet, payload) {
+    const { data_inicio, data_fim, id_user, id_carro, id_locadora } = payload;
+    if (id_locadora !== _id) throw new BadRequest('Id Rental', 'Invalid');
+
+    const people = await PeopleService.getById(id_user);
+    if (!people) throw new NotFound('people', 'not found in database');
+
+    const dateStart = moment(data_inicio, 'DD/MM/YYYY').format('YYYY-MM-DD');
+    const dateEnd = moment(data_fim, 'DD/MM/YYYY').format('YYYY-MM-DD');
+    payload.data_inicio = dateStart;
+    payload.data_fim = dateEnd;
+
+    const carFleet = await FleetRepository.getById(id_carro);
+    if (!carFleet) throw new NotFound('car', 'not found in fleet');
+
+    const rental = await RentalService.getById(id_locadora);
+    if (!rental) throw new NotFound('rental', 'not found in database');
+
+    const result = await ReserveRepository.update(_id, _idFleet, payload);
+    if (!result) throw new NotFound('Reserve', `not found in database`);
     return result;
   }
 
