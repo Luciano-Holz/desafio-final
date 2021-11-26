@@ -21,14 +21,13 @@ class FleetService {
     }
 
     const result = await FleetRepository.create(payload);
-    if (!result) {
-      throw new NotFound('Fleet', `not found`);
-    }
+    if (!result) throw new NotFound('Fleet', `not found`);
     return result;
   }
 
   async getAll(queryParams) {
     const result = await FleetRepository.getAll(queryParams);
+    if (!result) throw new NotFound('Fleet', `not found`);
     return result;
   }
 
@@ -49,6 +48,7 @@ class FleetService {
     if (!car) throw new NotFound('car', 'not found in database');
 
     const result = await FleetRepository.update(_id, _idFleet, payload);
+    if (!result) throw new NotFound('Fleet', `not found in database`);
     return result;
   }
 
