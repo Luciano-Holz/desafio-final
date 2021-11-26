@@ -43,10 +43,11 @@ class ReserveController {
 
   async delete(req, res) {
     try {
-      await ReserveService.delete(req.params._id);
+      const { _idReserve } = req.params;
+      await ReserveService.delete(_idReserve);
       return res.status(204).end();
-    } catch (error) {
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 }
