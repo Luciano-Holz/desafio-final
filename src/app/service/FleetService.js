@@ -37,8 +37,17 @@ class FleetService {
     return result;
   }
 
-  async update(_id, payload) {
-    const result = await FleetRepository.update(_id, payload);
+  async update(_id, _idFleet, payload) {
+    const { id_locadora, id_carro } = payload;
+    if (id_locadora !== _id) throw new BadRequest('Id Rental', 'Invalid');
+
+    const rental = await RentalRepository.getById(id_locadora);
+    if (!rental) throw new NotFound('rental', 'not found in database');
+
+    const car = await CarRepository.getById(id_carro);
+    if (!car) throw new NotFound('car', 'not found in database');
+
+    const result = await FleetRepository.update(_id, _idFleet, payload);
     return result;
   }
 

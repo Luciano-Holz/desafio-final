@@ -33,8 +33,8 @@ class FleetController {
 
   async update(req, res) {
     try {
-      const { _id } = req.params;
-      const result = await FleetService.update(_id, req.body);
+      const { _id, _idFleet } = req.params;
+      const result = await FleetService.update(_id, _idFleet, req.body);
       return res.status(200).json(serialize(result));
     } catch ({ name, description, status }) {
       return res.status(status).json({ name, description });
