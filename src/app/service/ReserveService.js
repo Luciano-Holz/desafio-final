@@ -37,7 +37,8 @@ class ReserveService {
   }
 
   async getById(_id, _idReserve) {
-    const result = await ReserveRepository.getById(_id, _idReserve);
+    const result = await ReserveRepository.getById(_idReserve);
+    if (!result) throw new NotFound('id', `Id ${_idReserve} not found`);
     return result;
   }
 
