@@ -67,6 +67,7 @@ class ReserveService {
 
   async delete(_id) {
     const result = await ReserveRepository.delete(_id);
+    if (!result) throw new NotFound('id', `Id ${_id} not found`);
     return result;
   }
 }
