@@ -7,8 +7,8 @@ class ReserveController {
       const { _id } = req.params;
       const result = await ReserveService.create(_id, req.body);
       return res.status(201).json(serialize(result));
-    } catch (error) {
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 
