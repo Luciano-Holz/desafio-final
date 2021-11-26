@@ -6,6 +6,18 @@ class FleetRepository extends Repository {
     super(FleetSchema);
   }
 
+  async update(_id, _idFleet, payload) {
+    const result = await this.schema.findByIdAndUpdate(
+      {
+        id_locadora: _id,
+        _id: _idFleet
+      },
+      payload,
+      { new: true }
+    );
+    return result;
+  }
+
   // async getById(_id) {
   //   const result = await FleetSchema.findById({ _id }).populate(['id_carro', 'id_locadora']);
   //   return result;
