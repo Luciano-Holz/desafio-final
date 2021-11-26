@@ -16,8 +16,8 @@ class ReserveController {
     try {
       const result = await ReserveService.getAll(req.query);
       return res.status(200).json(paginateSerialize(result));
-    } catch (error) {
-      return res.status(400).json({ name: error.path, description: error.message });
+    } catch ({ name, description, status }) {
+      return res.status(status).json({ name, description });
     }
   }
 
