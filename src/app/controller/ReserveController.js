@@ -23,7 +23,8 @@ class ReserveController {
 
   async getById(req, res) {
     try {
-      const result = await ReserveService.getById(req.params._id, req.params._idReserve);
+      const { _id, _idReserve } = req.params;
+      const result = await ReserveService.getById(_id, _idReserve);
       return res.status(200).json(serialize(result));
     } catch ({ name, description, status }) {
       return res.status(status).json({ name, description });
