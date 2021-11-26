@@ -18,10 +18,16 @@ class FleetRepository extends Repository {
     return result;
   }
 
-  // async getById(_id) {
-  //   const result = await FleetSchema.findById({ _id }).populate(['id_carro', 'id_locadora']);
-  //   return result;
-  // }
+  async getById(_id) {
+    const result = await FleetSchema.findById({ _id }).populate([
+      {
+        path: 'id_carro',
+        select: ['modelo', 'ano']
+      },
+      { path: 'id_locadora', select: 'nome' }
+    ]);
+    return result;
+  }
 }
 
 module.exports = new FleetRepository();
