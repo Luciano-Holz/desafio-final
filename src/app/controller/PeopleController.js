@@ -1,5 +1,5 @@
 const { serialize, paginateSerialize } = require('../serialize/PeopleSerialize');
-const PeopleService = require('../service/PeopleService');
+const PeopleService = require('../service/People');
 
 class PeopleController {
   async create(req, res) {
