@@ -13,8 +13,7 @@ module.exports = async (req, res, next) => {
         .required(),
       id_locadora: Joi.string()
         .pattern(/^[0-9a-fA-F]{24}$/)
-        .required(),
-      valor_final: Joi.number().required()
+        .required()
     });
 
     const { error } = await schema.validate(req.body, { abortEarly: false });
