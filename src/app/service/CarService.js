@@ -10,10 +10,6 @@ class CarService {
   }
 
   async getAll(queryParams) {
-    if (queryParams.descricao) {
-      queryParams['acessorios.descricao'] = queryParams.descricao;
-      delete queryParams.descricao;
-    }
     const result = await CarRepository.getAll(queryParams);
     if (!result) throw new NotFound('Params', 'not found');
     return result;
