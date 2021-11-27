@@ -4,8 +4,9 @@ const NotFound = require('../../errors/NotFound');
 const BadRequest = require('../../errors/BadRequest');
 const PeopleService = require('../People');
 const RentalService = require('../RentalService');
-const calculateValor_final = require('./validationCreate');
+const checkValidation = require('./checkValidation');
 const checkReserveCar = require('./checkReserveCar');
+const checkReserveUser = require('./checkReserveUser');
 
 class ReserveService {
   async create(_id, payload) {
@@ -24,7 +25,8 @@ class ReserveService {
     const rental = await RentalService.getById(id_locadora);
     if (!rental) throw new NotFound('rental', 'not found in database');
 
-    await calculateValor_final(payload);
+    await checkValidation(payload);
+    await checkReserveUser(id_user, data_inicio, data_fim);
     await checkReserveCar(id_carro, data_inicio, data_fim);
 
     const result = await ReserveRepository.create(payload);
@@ -60,7 +62,7 @@ class ReserveService {
     const rental = await RentalService.getById(id_locadora);
     if (!rental) throw new NotFound('rental', 'not found in database');
 
-    await calculateValor_final(payload);
+    await checkValidation(payload);
     await checkReserveCar(id_carro, data_inicio, data_fim);
 
     const result = await ReserveRepository.update(_id, _idFleet, payload);
