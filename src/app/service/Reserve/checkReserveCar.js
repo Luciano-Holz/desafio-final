@@ -14,6 +14,8 @@ const checkReserveCar = async (id_carro, dateStart, dateEnd) => {
       throw new BadRequest('Car', `This car is rented is this period.`);
     }
   });
+
+  return true;
 };
 
 module.exports = checkReserveCar;
