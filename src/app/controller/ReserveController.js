@@ -1,5 +1,5 @@
 const { serialize, paginateSerialize } = require('../serialize/ReserveSerialize');
-const ReserveService = require('../service/ReserveService');
+const ReserveService = require('../service/Reserve');
 
 class ReserveController {
   async create(req, res) {
