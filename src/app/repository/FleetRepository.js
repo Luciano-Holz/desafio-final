@@ -19,13 +19,7 @@ class FleetRepository extends Repository {
   }
 
   async getById(_id) {
-    const result = await FleetSchema.findById({ _id }).populate([
-      {
-        path: 'id_carro',
-        select: ['modelo', 'ano']
-      },
-      { path: 'id_locadora', select: 'nome' }
-    ]);
+    const result = await FleetSchema.findById({ _id }).lean();
     return result;
   }
 }
