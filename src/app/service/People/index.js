@@ -1,9 +1,9 @@
 const moment = require('moment');
-const PeopleRepository = require('../repository/PeopleRepository');
-const { checkCreate } = require('./People/validationCreate');
-const BadRequest = require('../errors/BadRequest');
-const NotFound = require('../errors/NotFound');
-const { checkUpdate } = require('./People/validationUpdate');
+const PeopleRepository = require('../../repository/PeopleRepository');
+const { checkCreate } = require('./validationCreate');
+const BadRequest = require('../../errors/BadRequest');
+const NotFound = require('../../errors/NotFound');
+const { checkUpdate } = require('./validationUpdate');
 
 class PeopleService {
   async create(payload) {
