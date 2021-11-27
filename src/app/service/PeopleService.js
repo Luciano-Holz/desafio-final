@@ -1,25 +1,14 @@
 const moment = require('moment');
 const PeopleRepository = require('../repository/PeopleRepository');
-const { validateCpf } = require('../utils/cpfValidator');
+const { checkCreate } = require('./People/validationCreate');
 const BadRequest = require('../errors/BadRequest');
 const NotFound = require('../errors/NotFound');
+const { validateCpf } = require('../utils/cpfValidator');
 
 class PeopleService {
   async create(payload) {
-    if (!validateCpf(payload)) throw new BadRequest('Conflict', `Cpf ${payload.cpf} is invalid`);
-    const formatData = moment(payload.data_nascimento, 'DD/MM/YYYY').format('YYYY-MM-DD');
-    const dataT = moment().diff(formatData, 'years');
-    if (dataT < 18) throw new BadRequest('data_nasimento', `Age under 18 years`);
-    payload.data_nascimento = formatData;
-
-    const checkCpf = await PeopleRepository.getAll({ cpf: payload.cpf });
-    if (checkCpf.docs.length > 0) {
-      throw new BadRequest('Conflict', `Cpf ${payload.cpf} is already in use`);
-    }
-    const checkEmail = await PeopleRepository.getAll({ email: payload.email });
-    if (checkEmail.docs.length > 0) {
-      throw new BadRequest('Conflict', `Email ${payload.email} is already in use`);
-    }
+    payload.data_nascimento = moment(payload.data_nascimento, 'DD/MM/YYYY').format('YYYY-MM-DD');
+    await checkCreate(payload);
     const results = await PeopleRepository.create(payload);
     if (!results) throw new NotFound('People', 'not found');
     return results;
