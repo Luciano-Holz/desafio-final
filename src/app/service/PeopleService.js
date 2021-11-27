@@ -3,7 +3,7 @@ const PeopleRepository = require('../repository/PeopleRepository');
 const { checkCreate } = require('./People/validationCreate');
 const BadRequest = require('../errors/BadRequest');
 const NotFound = require('../errors/NotFound');
-const { validateCpf } = require('../utils/cpfValidator');
+const { checkUpdate } = require('./People/validationUpdate');
 
 class PeopleService {
   async create(payload) {
@@ -27,12 +27,8 @@ class PeopleService {
   }
 
   async update(_id, payload) {
-    if (!validateCpf(payload)) throw new BadRequest('Conflict', `Cpf ${payload.cpf} is invalid`);
-    const formatData = moment(payload.data_nascimento, 'DD/MM/YYYY').format('YYYY-MM-DD');
-    const dataT = moment().diff(formatData, 'years');
-    if (dataT < 18) throw BadRequest('data_nasimento', `Age under 18 years`);
-    payload.data_nascimento = formatData;
-
+    payload.data_nascimento = moment(payload.data_nascimento, 'DD/MM/YYYY').format('YYYY-MM-DD');
+    await checkUpdate(payload);
     const result = PeopleRepository.update(_id, payload);
     if (!result) throw new BadRequest('id', `Id ${_id} is invalid`);
     return result;
