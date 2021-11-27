@@ -6,6 +6,14 @@ class CarRepository extends Repository {
     super(CarSchema);
   }
 
+  async getAll(queryParams) {
+    if (queryParams.descricao) {
+      queryParams['acessorios.descricao'] = queryParams.descricao;
+      delete queryParams.descricao;
+    }
+    return super.getAll(queryParams);
+  }
+
   async patch(_id, _idAcessorio, payload) {
     const result = await CarSchema.findOneAndUpdate(
       { _id, 'acessorios._id': _idAcessorio },
