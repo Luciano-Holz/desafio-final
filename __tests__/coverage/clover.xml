@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1637839275262" clover="3.2.0">
-  <project timestamp="1637839275262" name="All files">
-    <metrics statements="652" coveredstatements="527" conditionals="145" coveredconditionals="90" methods="130" coveredmethods="88" elements="927" coveredelements="705" complexity="0" loc="652" ncloc="652" packages="18" files="53" classes="53"/>
+<coverage generated="1638217518664" clover="3.2.0">
+  <project timestamp="1638217518666" name="All files">
+    <metrics statements="818" coveredstatements="409" conditionals="207" coveredconditionals="33" methods="151" coveredmethods="50" elements="1176" coveredelements="492" complexity="0" loc="818" ncloc="818" packages="25" files="65" classes="65"/>
     <package name="src">
       <metrics statements="11" coveredstatements="9" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="app.js" path="C:\Users\marad\luciano\desafio-final\src\app.js">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="7" count="16" type="stmt"/>
-        <line num="8" count="16" type="stmt"/>
-        <line num="9" count="16" type="stmt"/>
-        <line num="13" count="16" type="stmt"/>
-        <line num="17" count="16" type="stmt"/>
-        <line num="21" count="16" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
       </file>
       <file name="server.js" path="C:\Users\marad\luciano\desafio-final\src\server.js">
         <metrics statements="2" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -26,58 +26,58 @@
       <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
       <file name="config.js" path="C:\Users\marad\luciano\desafio-final\src\app\config\config.js">
         <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="7" count="16" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.app.controller">
-      <metrics statements="134" coveredstatements="78" conditionals="0" coveredconditionals="0" methods="27" coveredmethods="16"/>
+      <metrics statements="138" coveredstatements="29" conditionals="0" coveredconditionals="0" methods="27" coveredmethods="4"/>
       <file name="AuthenticatorController.js" path="C:\Users\marad\luciano\desafio-final\src\app\controller\AuthenticatorController.js">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="5" count="14" type="stmt"/>
-        <line num="6" count="14" type="stmt"/>
-        <line num="7" count="8" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="14" count="16" type="stmt"/>
+        <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
       </file>
       <file name="CarController.js" path="C:\Users\marad\luciano\desafio-final\src\app\controller\CarController.js">
-        <metrics statements="29" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="5"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="6" count="35" type="stmt"/>
-        <line num="7" count="35" type="stmt"/>
-        <line num="8" count="35" type="stmt"/>
+        <metrics statements="29" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="16" count="9" type="stmt"/>
+        <line num="17" count="9" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="24" count="6" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="33" count="3" type="stmt"/>
-        <line num="34" count="3" type="stmt"/>
-        <line num="35" count="3" type="stmt"/>
-        <line num="36" count="3" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
-        <line num="43" count="5" type="stmt"/>
-        <line num="44" count="5" type="stmt"/>
-        <line num="45" count="2" type="stmt"/>
-        <line num="47" count="3" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
         <line num="52" count="0" type="stmt"/>
         <line num="53" count="0" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
         <line num="57" count="0" type="stmt"/>
-        <line num="62" count="16" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
       </file>
       <file name="FleetController.js" path="C:\Users\marad\luciano\desafio-final\src\app\controller\FleetController.js">
-        <metrics statements="25" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
+        <metrics statements="27" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
@@ -90,77 +90,79 @@
         <line num="25" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
-        <line num="53" count="16" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
       </file>
       <file name="PeopleController.js" path="C:\Users\marad\luciano\desafio-final\src\app\controller\PeopleController.js">
-        <metrics statements="25" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="6" count="64" type="stmt"/>
-        <line num="7" count="64" type="stmt"/>
-        <line num="8" count="58" type="stmt"/>
-        <line num="10" count="6" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
+        <metrics statements="25" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="24" count="6" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="33" count="3" type="stmt"/>
-        <line num="34" count="3" type="stmt"/>
-        <line num="35" count="3" type="stmt"/>
-        <line num="36" count="3" type="stmt"/>
-        <line num="37" count="3" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
         <line num="39" count="0" type="stmt"/>
-        <line num="44" count="5" type="stmt"/>
-        <line num="45" count="5" type="stmt"/>
-        <line num="46" count="2" type="stmt"/>
-        <line num="48" count="3" type="stmt"/>
-        <line num="53" count="16" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
       </file>
       <file name="RentalController.js" path="C:\Users\marad\luciano\desafio-final\src\app\controller\RentalController.js">
-        <metrics statements="24" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="6" count="29" type="stmt"/>
-        <line num="7" count="29" type="stmt"/>
-        <line num="8" count="26" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
+        <metrics statements="24" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="24" count="6" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
-        <line num="28" count="3" type="stmt"/>
-        <line num="33" count="3" type="stmt"/>
-        <line num="34" count="3" type="stmt"/>
-        <line num="35" count="3" type="stmt"/>
-        <line num="36" count="3" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
-        <line num="43" count="5" type="stmt"/>
-        <line num="44" count="5" type="stmt"/>
-        <line num="45" count="2" type="stmt"/>
-        <line num="47" count="3" type="stmt"/>
-        <line num="52" count="16" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
       </file>
       <file name="ReserveController.js" path="C:\Users\marad\luciano\desafio-final\src\app\controller\ReserveController.js">
-        <metrics statements="25" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
+        <metrics statements="27" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
@@ -173,545 +175,708 @@
         <line num="25" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
         <line num="45" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
-        <line num="53" count="16" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.app.errors">
-      <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="10" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="BadRequest.js" path="C:\Users\marad\luciano\desafio-final\src\app\errors\BadRequest.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="21" type="stmt"/>
-        <line num="4" count="21" type="stmt"/>
-        <line num="5" count="21" type="stmt"/>
-        <line num="6" count="21" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
+        <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
       </file>
       <file name="NotFound.js" path="C:\Users\marad\luciano\desafio-final\src\app\errors\NotFound.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="12" type="stmt"/>
-        <line num="4" count="12" type="stmt"/>
-        <line num="5" count="12" type="stmt"/>
-        <line num="6" count="12" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
+        <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.app.helpers">
-      <metrics statements="9" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <metrics statements="9" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="AddressDuplicate.js" path="C:\Users\marad\luciano\desafio-final\src\app\helpers\AddressDuplicate.js">
-        <metrics statements="9" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="4" count="29" type="stmt"/>
-        <line num="6" count="29" type="stmt"/>
-        <line num="7" count="29" type="stmt"/>
-        <line num="8" count="29" type="cond" truecount="1" falsecount="1"/>
+        <metrics statements="9" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="11" count="29" type="stmt"/>
-        <line num="14" count="16" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="PlacaDuplicate.js" path="C:\Users\marad\luciano\desafio-final\src\app\helpers\PlacaDuplicate.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="src.app.middlewares">
       <metrics statements="15" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
       <file name="auth.js" path="C:\Users\marad\luciano\desafio-final\src\app\middlewares\auth.js">
         <metrics statements="15" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="4" count="16" type="stmt"/>
-        <line num="6" count="16" type="stmt"/>
-        <line num="7" count="88" type="stmt"/>
-        <line num="8" count="88" type="stmt"/>
-        <line num="9" count="88" type="cond" truecount="1" falsecount="1"/>
-        <line num="11" count="88" type="stmt"/>
-        <line num="12" count="88" type="cond" truecount="1" falsecount="1"/>
-        <line num="14" count="88" type="stmt"/>
-        <line num="15" count="88" type="stmt"/>
-        <line num="16" count="88" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="18" type="stmt"/>
+        <line num="8" count="18" type="stmt"/>
+        <line num="9" count="18" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="18" type="stmt"/>
+        <line num="12" count="18" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="18" type="stmt"/>
+        <line num="15" count="18" type="stmt"/>
+        <line num="16" count="18" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
-        <line num="27" count="16" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.app.repository">
-      <metrics statements="61" coveredstatements="36" conditionals="6" coveredconditionals="2" methods="22" coveredmethods="11"/>
+      <metrics statements="53" coveredstatements="33" conditionals="4" coveredconditionals="3" methods="18" coveredmethods="10"/>
       <file name="CarRepository.js" path="C:\Users\marad\luciano\desafio-final\src\app\repository\CarRepository.js">
-        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="6" count="16" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="23" count="16" type="stmt"/>
+        <metrics statements="10" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="9" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
       </file>
       <file name="FleetRepository.js" path="C:\Users\marad\luciano\desafio-final\src\app\repository\FleetRepository.js">
-        <metrics statements="13" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
+        <metrics statements="8" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="38" count="16" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
       </file>
       <file name="PeopleRepository.js" path="C:\Users\marad\luciano\desafio-final\src\app\repository\PeopleRepository.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="6" count="16" type="stmt"/>
-        <line num="10" count="14" type="stmt"/>
-        <line num="11" count="14" type="stmt"/>
-        <line num="14" count="16" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
       </file>
       <file name="RentalRepository.js" path="C:\Users\marad\luciano\desafio-final\src\app\repository\RentalRepository.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="6" count="16" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
       </file>
       <file name="Repository.js" path="C:\Users\marad\luciano\desafio-final\src\app\repository\Repository.js">
-        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
-        <line num="3" count="48" type="stmt"/>
-        <line num="7" count="119" type="stmt"/>
-        <line num="8" count="119" type="stmt"/>
-        <line num="12" count="172" type="cond" truecount="2" falsecount="0"/>
-        <line num="13" count="172" type="stmt"/>
-        <line num="21" count="172" type="stmt"/>
-        <line num="25" count="21" type="stmt"/>
-        <line num="26" count="21" type="stmt"/>
-        <line num="30" count="9" type="stmt"/>
-        <line num="31" count="9" type="stmt"/>
-        <line num="35" count="15" type="stmt"/>
-        <line num="36" count="15" type="stmt"/>
-        <line num="40" count="16" type="stmt"/>
+        <metrics statements="13" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="3"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="12" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="21" count="11" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
       </file>
       <file name="ReserveRepository.js" path="C:\Users\marad\luciano\desafio-final\src\app\repository\ReserveRepository.js">
-        <metrics statements="13" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
+        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="38" count="16" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
       <file name="ViacepRepository.js" path="C:\Users\marad\luciano\desafio-final\src\app\repository\ViacepRepository.js">
-        <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="5" count="35" type="stmt"/>
-        <line num="6" count="35" type="stmt"/>
-        <line num="7" count="35" type="stmt"/>
+        <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="14" count="16" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.app.schema">
       <metrics statements="35" coveredstatements="35" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="CarSchema.js" path="C:\Users\marad\luciano\desafio-final\src\app\schema\CarSchema.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="4" count="16" type="stmt"/>
-        <line num="37" count="16" type="stmt"/>
-        <line num="39" count="16" type="stmt"/>
-        <line num="41" count="16" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
       </file>
       <file name="FleetSchema.js" path="C:\Users\marad\luciano\desafio-final\src\app\schema\FleetSchema.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="4" count="16" type="stmt"/>
-        <line num="35" count="16" type="stmt"/>
-        <line num="37" count="16" type="stmt"/>
-        <line num="39" count="16" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
       </file>
       <file name="PeopleSchema.js" path="C:\Users\marad\luciano\desafio-final\src\app\schema\PeopleSchema.js">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="5" count="16" type="stmt"/>
-        <line num="42" count="16" type="stmt"/>
-        <line num="43" count="58" type="stmt"/>
-        <line num="44" count="58" type="stmt"/>
-        <line num="45" count="58" type="stmt"/>
-        <line num="48" count="16" type="stmt"/>
-        <line num="50" count="16" type="stmt"/>
-        <line num="52" count="16" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
       </file>
       <file name="RentalSchema.js" path="C:\Users\marad\luciano\desafio-final\src\app\schema\RentalSchema.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="4" count="16" type="stmt"/>
-        <line num="57" count="16" type="stmt"/>
-        <line num="59" count="16" type="stmt"/>
-        <line num="61" count="16" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
       </file>
       <file name="ReserveSchema.js" path="C:\Users\marad\luciano\desafio-final\src\app\schema\ReserveSchema.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="4" count="16" type="stmt"/>
-        <line num="40" count="16" type="stmt"/>
-        <line num="42" count="16" type="stmt"/>
-        <line num="44" count="16" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.app.serialize">
-      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="6"/>
+      <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="3"/>
       <file name="CarSerialize.js" path="C:\Users\marad\luciano\desafio-final\src\app\serialize\CarSerialize.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="50" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
-        <line num="18" count="16" type="stmt"/>
+        <line num="1" count="18" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
       </file>
       <file name="FleetSerialize.js" path="C:\Users\marad\luciano\desafio-final\src\app\serialize\FleetSerialize.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="11" count="16" type="stmt"/>
-        <line num="19" count="16" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
       </file>
       <file name="PeopleSerialize.js" path="C:\Users\marad\luciano\desafio-final\src\app\serialize\PeopleSerialize.js">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="3" count="73" type="stmt"/>
-        <line num="12" count="16" type="stmt"/>
-        <line num="20" count="16" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
       </file>
       <file name="RentalSerialize.js" path="C:\Users\marad\luciano\desafio-final\src\app\serialize\RentalSerialize.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="41" type="stmt"/>
-        <line num="9" count="16" type="stmt"/>
-        <line num="17" count="16" type="stmt"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
       </file>
       <file name="ReserveSerialize.js" path="C:\Users\marad\luciano\desafio-final\src\app\serialize\ReserveSerialize.js">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="11" count="16" type="stmt"/>
-        <line num="19" count="16" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.app.service">
-      <metrics statements="164" coveredstatements="136" conditionals="68" coveredconditionals="44" methods="29" coveredmethods="18"/>
+      <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="AuthenticatorService.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\AuthenticatorService.js">
-        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="4" count="16" type="stmt"/>
-        <line num="5" count="16" type="stmt"/>
-        <line num="6" count="16" type="stmt"/>
-        <line num="8" count="16" type="stmt"/>
-        <line num="12" count="14" type="stmt"/>
-        <line num="13" count="14" type="stmt"/>
-        <line num="15" count="14" type="cond" truecount="2" falsecount="0"/>
-        <line num="17" count="11" type="cond" truecount="2" falsecount="0"/>
-        <line num="19" count="8" type="stmt"/>
-        <line num="21" count="8" type="stmt"/>
-        <line num="22" count="8" type="stmt"/>
-        <line num="23" count="8" type="stmt"/>
-        <line num="27" count="16" type="stmt"/>
+        <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
       </file>
-      <file name="CarService.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\CarService.js">
-        <metrics statements="25" coveredstatements="20" conditionals="14" coveredconditionals="8" methods="6" coveredmethods="5"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="7" count="35" type="stmt"/>
-        <line num="8" count="35" type="cond" truecount="1" falsecount="1"/>
-        <line num="9" count="35" type="stmt"/>
-        <line num="13" count="6" type="cond" truecount="1" falsecount="1"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
-        <line num="18" count="6" type="cond" truecount="1" falsecount="1"/>
-        <line num="19" count="6" type="stmt"/>
-        <line num="23" count="6" type="stmt"/>
-        <line num="24" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="25" count="3" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="30" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="31" count="3" type="stmt"/>
-        <line num="35" count="5" type="stmt"/>
-        <line num="36" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="37" count="2" type="stmt"/>
+    </package>
+    <package name="src.app.service.Car">
+      <metrics statements="22" coveredstatements="10" conditionals="12" coveredconditionals="2" methods="6" coveredmethods="2"/>
+      <file name="index.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\Car\index.js">
+        <metrics statements="22" coveredstatements="10" conditionals="12" coveredconditionals="2" methods="6" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="8" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
+        <line num="14" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.service.Fleet">
+      <metrics statements="42" coveredstatements="11" conditionals="24" coveredconditionals="0" methods="6" coveredmethods="0"/>
+      <file name="index.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\Fleet\index.js">
+        <metrics statements="35" coveredstatements="7" conditionals="22" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="41" count="0" type="stmt"/>
         <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="47" count="16" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
       </file>
-      <file name="FleetService.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\FleetService.js">
-        <metrics statements="12" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
+      <file name="validationCreate.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\Fleet\validationCreate.js">
+        <metrics statements="7" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
+        <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.service.People">
+      <metrics statements="62" coveredstatements="40" conditionals="22" coveredconditionals="5" methods="12" coveredmethods="5"/>
+      <file name="index.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\People\index.js">
+        <metrics statements="27" coveredstatements="12" conditionals="10" coveredconditionals="1" methods="5" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+      </file>
+      <file name="validationCreate.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\People\validationCreate.js">
+        <metrics statements="23" coveredstatements="21" conditionals="8" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+      </file>
+      <file name="validationUpdate.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\People\validationUpdate.js">
+        <metrics statements="12" coveredstatements="7" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="1" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="1" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.service.Rental">
+      <metrics statements="59" coveredstatements="16" conditionals="20" coveredconditionals="0" methods="11" coveredmethods="0"/>
+      <file name="index.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\Rental\index.js">
+        <metrics statements="22" coveredstatements="5" conditionals="10" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="17" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="30" count="16" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
       </file>
-      <file name="PeopleService.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\PeopleService.js">
-        <metrics statements="38" coveredstatements="38" conditionals="22" coveredconditionals="15" methods="5" coveredmethods="5"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="4" count="16" type="stmt"/>
-        <line num="5" count="16" type="stmt"/>
-        <line num="9" count="64" type="cond" truecount="1" falsecount="1"/>
-        <line num="10" count="64" type="stmt"/>
-        <line num="11" count="64" type="stmt"/>
-        <line num="12" count="64" type="cond" truecount="1" falsecount="1"/>
-        <line num="13" count="64" type="stmt"/>
-        <line num="15" count="64" type="stmt"/>
-        <line num="16" count="64" type="cond" truecount="2" falsecount="0"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="19" count="61" type="stmt"/>
-        <line num="20" count="61" type="cond" truecount="2" falsecount="0"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="23" count="58" type="stmt"/>
-        <line num="24" count="58" type="cond" truecount="1" falsecount="1"/>
-        <line num="25" count="58" type="stmt"/>
-        <line num="29" count="6" type="stmt"/>
-        <line num="30" count="6" type="cond" truecount="1" falsecount="1"/>
-        <line num="31" count="6" type="stmt"/>
-        <line num="35" count="9" type="stmt"/>
-        <line num="36" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="37" count="6" type="stmt"/>
-        <line num="41" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="42" count="3" type="stmt"/>
-        <line num="43" count="3" type="stmt"/>
-        <line num="44" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="45" count="3" type="stmt"/>
-        <line num="47" count="3" type="stmt"/>
-        <line num="48" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="49" count="3" type="stmt"/>
-        <line num="53" count="5" type="stmt"/>
-        <line num="54" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="55" count="3" type="stmt"/>
-        <line num="57" count="2" type="stmt"/>
-        <line num="61" count="16" type="stmt"/>
-      </file>
-      <file name="RentalService.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\RentalService.js">
-        <metrics statements="61" coveredstatements="58" conditionals="28" coveredconditionals="17" methods="7" coveredmethods="7"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="4" count="16" type="stmt"/>
-        <line num="5" count="16" type="stmt"/>
-        <line num="6" count="16" type="stmt"/>
-        <line num="10" count="29" type="cond" truecount="1" falsecount="1"/>
-        <line num="11" count="29" type="stmt"/>
-        <line num="12" count="29" type="cond" truecount="1" falsecount="1"/>
+      <file name="validationCreate.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\Rental\validationCreate.js">
+        <metrics statements="37" coveredstatements="11" conditionals="10" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
-        <line num="15" count="29" type="stmt"/>
-        <line num="17" count="32" type="stmt"/>
-        <line num="18" count="32" type="stmt"/>
-        <line num="19" count="32" type="stmt"/>
-        <line num="20" count="32" type="stmt"/>
-        <line num="21" count="32" type="stmt"/>
-        <line num="22" count="32" type="stmt"/>
-        <line num="23" count="32" type="stmt"/>
-        <line num="26" count="29" type="stmt"/>
-        <line num="27" count="29" type="stmt"/>
-        <line num="28" count="32" type="cond" truecount="1" falsecount="1"/>
-        <line num="29" count="32" type="stmt"/>
-        <line num="31" count="32" type="cond" truecount="2" falsecount="0"/>
-        <line num="32" count="3" type="stmt"/>
-        <line num="35" count="26" type="cond" truecount="1" falsecount="1"/>
-        <line num="36" count="26" type="stmt"/>
-        <line num="37" count="26" type="stmt"/>
-        <line num="39" count="26" type="stmt"/>
-        <line num="40" count="26" type="cond" truecount="1" falsecount="1"/>
-        <line num="41" count="26" type="stmt"/>
-        <line num="45" count="6" type="stmt"/>
-        <line num="46" count="6" type="cond" truecount="1" falsecount="1"/>
-        <line num="47" count="6" type="stmt"/>
-        <line num="51" count="6" type="stmt"/>
-        <line num="52" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="53" count="3" type="stmt"/>
-        <line num="57" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="58" count="3" type="stmt"/>
-        <line num="60" count="3" type="stmt"/>
-        <line num="61" count="3" type="stmt"/>
-        <line num="62" count="3" type="stmt"/>
-        <line num="63" count="3" type="stmt"/>
-        <line num="64" count="3" type="stmt"/>
-        <line num="65" count="3" type="stmt"/>
-        <line num="66" count="3" type="stmt"/>
-        <line num="69" count="3" type="stmt"/>
-        <line num="70" count="3" type="stmt"/>
-        <line num="71" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="72" count="0" type="stmt"/>
-        <line num="74" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="75" count="0" type="stmt"/>
-        <line num="78" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="79" count="3" type="stmt"/>
-        <line num="80" count="3" type="stmt"/>
-        <line num="82" count="3" type="stmt"/>
-        <line num="83" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="84" count="3" type="stmt"/>
-        <line num="88" count="5" type="stmt"/>
-        <line num="89" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="90" count="2" type="stmt"/>
-        <line num="94" count="16" type="stmt"/>
-      </file>
-      <file name="ReserveService.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\ReserveService.js">
-        <metrics statements="12" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.service.Reserve">
+      <metrics statements="92" coveredstatements="25" conditionals="42" coveredconditionals="0" methods="10" coveredmethods="0"/>
+      <file name="checkReserveCar.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\Reserve\checkReserveCar.js">
+        <metrics statements="11" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+      <file name="checkReserveUser.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\Reserve\checkReserveUser.js">
+        <metrics statements="11" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+      <file name="checkValidation.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\Reserve\checkValidation.js">
+        <metrics statements="20" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="30" count="16" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+      </file>
+      <file name="index.js" path="C:\Users\marad\luciano\desafio-final\src\app\service\Reserve\index.js">
+        <metrics statements="50" coveredstatements="10" conditionals="30" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.app.utils">
-      <metrics statements="57" coveredstatements="56" conditionals="42" coveredconditionals="24" methods="8" coveredmethods="8"/>
+      <metrics statements="57" coveredstatements="26" conditionals="42" coveredconditionals="8" methods="8" coveredmethods="6"/>
       <file name="cnpjValidator.js" path="C:\Users\marad\luciano\desafio-final\src\app\utils\cnpjValidator.js">
-        <metrics statements="33" coveredstatements="32" conditionals="27" coveredconditionals="16" methods="2" coveredmethods="2"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="32" type="stmt"/>
-        <line num="3" count="32" type="cond" truecount="1" falsecount="1"/>
-        <line num="4" count="32" type="stmt"/>
-        <line num="5" count="32" type="cond" truecount="1" falsecount="2"/>
-        <line num="6" count="32" type="cond" truecount="1" falsecount="1"/>
-        <line num="7" count="32" type="cond" truecount="1" falsecount="1"/>
-        <line num="8" count="32" type="cond" truecount="1" falsecount="1"/>
-        <line num="9" count="32" type="stmt"/>
-        <line num="10" count="32" type="stmt"/>
-        <line num="12" count="32" type="cond" truecount="3" falsecount="1"/>
+        <metrics statements="33" coveredstatements="2" conditionals="27" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="8" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="4"/>
         <line num="13" count="0" type="stmt"/>
-        <line num="15" count="32" type="stmt"/>
-        <line num="16" count="32" type="cond" truecount="1" falsecount="1"/>
-        <line num="17" count="32" type="cond" truecount="1" falsecount="1"/>
-        <line num="18" count="32" type="stmt"/>
-        <line num="19" count="32" type="cond" truecount="1" falsecount="1"/>
-        <line num="20" count="32" type="stmt"/>
-        <line num="21" count="64" type="stmt"/>
-        <line num="22" count="64" type="stmt"/>
-        <line num="23" count="64" type="stmt"/>
-        <line num="24" count="64" type="stmt"/>
-        <line num="25" count="800" type="stmt"/>
-        <line num="27" count="800" type="stmt"/>
-        <line num="28" count="800" type="cond" truecount="2" falsecount="0"/>
-        <line num="30" count="64" type="stmt"/>
-        <line num="31" count="64" type="cond" truecount="2" falsecount="0"/>
-        <line num="33" count="32" type="stmt"/>
-        <line num="34" count="32" type="stmt"/>
-        <line num="35" count="32" type="cond" truecount="1" falsecount="1"/>
-        <line num="36" count="32" type="stmt"/>
-        <line num="37" count="32" type="stmt"/>
-        <line num="40" count="16" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
       </file>
       <file name="cpfValidator.js" path="C:\Users\marad\luciano\desafio-final\src\app\utils\cpfValidator.js">
         <metrics statements="24" coveredstatements="24" conditionals="15" coveredconditionals="8" methods="6" coveredmethods="6"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="67" type="stmt"/>
-        <line num="3" count="67" type="cond" truecount="1" falsecount="1"/>
-        <line num="4" count="67" type="cond" truecount="1" falsecount="2"/>
-        <line num="5" count="67" type="cond" truecount="1" falsecount="1"/>
-        <line num="6" count="67" type="stmt"/>
-        <line num="7" count="67" type="cond" truecount="1" falsecount="1"/>
-        <line num="8" count="67" type="stmt"/>
-        <line num="9" count="67" type="cond" truecount="1" falsecount="1"/>
-        <line num="10" count="67" type="stmt"/>
-        <line num="11" count="67" type="stmt"/>
-        <line num="12" count="1273" type="stmt"/>
-        <line num="13" count="1273" type="stmt"/>
-        <line num="14" count="67" type="stmt"/>
-        <line num="15" count="134" type="stmt"/>
-        <line num="16" count="134" type="cond" truecount="2" falsecount="0"/>
-        <line num="18" count="603" type="stmt"/>
-        <line num="19" count="67" type="stmt"/>
-        <line num="20" count="67" type="cond" truecount="1" falsecount="1"/>
-        <line num="21" count="67" type="stmt"/>
-        <line num="23" count="670" type="stmt"/>
-        <line num="25" count="67" type="stmt"/>
-        <line num="26" count="67" type="stmt"/>
-        <line num="28" count="16" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="1" type="cond" truecount="1" falsecount="2"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="19" type="stmt"/>
+        <line num="13" count="19" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="9" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="10" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.app.validation">
-      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <metrics statements="9" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="idValidation.js" path="C:\Users\marad\luciano\desafio-final\src\app\validation\idValidation.js">
-        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="4" count="90" type="stmt"/>
-        <line num="5" count="90" type="stmt"/>
-        <line num="11" count="90" type="stmt"/>
-        <line num="12" count="90" type="cond" truecount="2" falsecount="0"/>
-        <line num="13" count="81" type="stmt"/>
-        <line num="15" count="9" type="stmt"/>
-        <line num="16" count="9" type="stmt"/>
+        <metrics statements="9" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.validation.auth">
       <metrics statements="9" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
       <file name="create.js" path="C:\Users\marad\luciano\desafio-final\src\app\validation\auth\create.js">
         <metrics statements="9" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="4" count="14" type="stmt"/>
-        <line num="5" count="14" type="stmt"/>
-        <line num="10" count="14" type="stmt"/>
-        <line num="11" count="14" type="cond" truecount="1" falsecount="1"/>
-        <line num="12" count="14" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="1" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.validation.car">
-      <metrics statements="18" coveredstatements="11" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="2"/>
+      <metrics statements="18" coveredstatements="9" conditionals="4" coveredconditionals="1" methods="4" coveredmethods="1"/>
       <file name="create.js" path="C:\Users\marad\luciano\desafio-final\src\app\validation\car\create.js">
-        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="4" count="68" type="stmt"/>
-        <line num="5" count="68" type="stmt"/>
-        <line num="13" count="68" type="stmt"/>
-        <line num="14" count="68" type="cond" truecount="2" falsecount="0"/>
-        <line num="15" count="38" type="stmt"/>
-        <line num="17" count="30" type="stmt"/>
-        <line num="18" count="30" type="stmt"/>
+        <metrics statements="9" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
+        <line num="14" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
       </file>
       <file name="descricaoValidation.js" path="C:\Users\marad\luciano\desafio-final\src\app\validation\car\descricaoValidation.js">
         <metrics statements="9" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
         <line num="5" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -721,150 +886,208 @@
         <line num="14" count="0" type="stmt"/>
       </file>
     </package>
+    <package name="src.app.validation.fleet">
+      <metrics statements="18" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="create.js" path="C:\Users\marad\luciano\desafio-final\src\app\validation\fleet\create.js">
+        <metrics statements="9" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+      </file>
+      <file name="idFleetValidation.js" path="C:\Users\marad\luciano\desafio-final\src\app\validation\fleet\idFleetValidation.js">
+        <metrics statements="9" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+      </file>
+    </package>
     <package name="src.app.validation.people">
-      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <metrics statements="9" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
       <file name="create.js" path="C:\Users\marad\luciano\desafio-final\src\app\validation\people\create.js">
-        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="4" count="103" type="stmt"/>
-        <line num="5" count="103" type="stmt"/>
-        <line num="16" count="103" type="stmt"/>
-        <line num="17" count="103" type="cond" truecount="2" falsecount="0"/>
-        <line num="18" count="67" type="stmt"/>
-        <line num="20" count="36" type="stmt"/>
-        <line num="21" count="36" type="stmt"/>
+        <metrics statements="9" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.app.validation.rental">
-      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <metrics statements="9" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="create.js" path="C:\Users\marad\luciano\desafio-final\src\app\validation\rental\create.js">
-        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="4" count="47" type="stmt"/>
-        <line num="5" count="47" type="stmt"/>
-        <line num="18" count="47" type="stmt"/>
-        <line num="19" count="47" type="cond" truecount="2" falsecount="0"/>
-        <line num="20" count="32" type="stmt"/>
-        <line num="22" count="15" type="stmt"/>
-        <line num="23" count="15" type="stmt"/>
+        <metrics statements="9" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.app.validation.reserve">
+      <metrics statements="18" coveredstatements="4" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="create.js" path="C:\Users\marad\luciano\desafio-final\src\app\validation\reserve\create.js">
+        <metrics statements="9" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+      </file>
+      <file name="idReserveValidation.js" path="C:\Users\marad\luciano\desafio-final\src\app\validation\reserve\idReserveValidation.js">
+        <metrics statements="9" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.infra.database.mongo">
       <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
       <file name="index.js" path="C:\Users\marad\luciano\desafio-final\src\infra\database\mongo\index.js">
         <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="7" count="16" type="stmt"/>
-        <line num="11" count="32" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
-        <line num="19" count="16" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.routes">
-      <metrics statements="77" coveredstatements="77" conditionals="7" coveredconditionals="7" methods="9" coveredmethods="9"/>
+      <metrics statements="81" coveredstatements="81" conditionals="7" coveredconditionals="7" methods="9" coveredmethods="9"/>
       <file name="authenticator.router.js" path="C:\Users\marad\luciano\desafio-final\src\routes\authenticator.router.js">
         <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="4" count="16" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="292" type="stmt"/>
-        <line num="6" count="292" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="20" type="stmt"/>
+        <line num="6" count="20" type="stmt"/>
       </file>
       <file name="car.router.js" path="C:\Users\marad\luciano\desafio-final\src\routes\car.router.js">
         <metrics statements="13" coveredstatements="13" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="4" count="16" type="stmt"/>
-        <line num="5" count="16" type="stmt"/>
-        <line num="7" count="16" type="cond" truecount="1" falsecount="0"/>
-        <line num="8" count="292" type="stmt"/>
-        <line num="9" count="292" type="stmt"/>
-        <line num="10" count="292" type="stmt"/>
-        <line num="11" count="292" type="stmt"/>
-        <line num="12" count="292" type="stmt"/>
-        <line num="13" count="292" type="stmt"/>
-        <line num="15" count="292" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="20" type="stmt"/>
+        <line num="9" count="20" type="stmt"/>
+        <line num="10" count="20" type="stmt"/>
+        <line num="11" count="20" type="stmt"/>
+        <line num="12" count="20" type="stmt"/>
+        <line num="13" count="20" type="stmt"/>
+        <line num="15" count="20" type="stmt"/>
       </file>
       <file name="fleet.router.js" path="C:\Users\marad\luciano\desafio-final\src\routes\fleet.router.js">
-        <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="3" count="16" type="cond" truecount="1" falsecount="0"/>
-        <line num="4" count="292" type="stmt"/>
-        <line num="5" count="292" type="stmt"/>
-        <line num="6" count="292" type="stmt"/>
-        <line num="7" count="292" type="stmt"/>
-        <line num="8" count="292" type="stmt"/>
-        <line num="10" count="292" type="stmt"/>
+        <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="20" type="stmt"/>
+        <line num="7" count="20" type="stmt"/>
+        <line num="8" count="20" type="stmt"/>
+        <line num="9" count="20" type="stmt"/>
+        <line num="10" count="20" type="stmt"/>
+        <line num="12" count="20" type="stmt"/>
       </file>
       <file name="index.js" path="C:\Users\marad\luciano\desafio-final\src\routes\index.js">
         <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="4" count="16" type="stmt"/>
-        <line num="5" count="16" type="stmt"/>
-        <line num="6" count="16" type="stmt"/>
-        <line num="7" count="16" type="stmt"/>
-        <line num="8" count="16" type="stmt"/>
-        <line num="10" count="16" type="stmt"/>
-        <line num="11" count="16" type="stmt"/>
-        <line num="12" count="292" type="stmt"/>
-        <line num="13" count="292" type="stmt"/>
-        <line num="14" count="292" type="stmt"/>
-        <line num="15" count="292" type="stmt"/>
-        <line num="16" count="292" type="stmt"/>
-        <line num="17" count="292" type="stmt"/>
-        <line num="18" count="292" type="stmt"/>
-        <line num="19" count="292" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="20" type="stmt"/>
+        <line num="13" count="20" type="stmt"/>
+        <line num="14" count="20" type="stmt"/>
+        <line num="15" count="20" type="stmt"/>
+        <line num="16" count="20" type="stmt"/>
+        <line num="17" count="20" type="stmt"/>
+        <line num="18" count="20" type="stmt"/>
+        <line num="19" count="20" type="stmt"/>
       </file>
       <file name="people.router.js" path="C:\Users\marad\luciano\desafio-final\src\routes\people.router.js">
         <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="5" count="16" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="292" type="stmt"/>
-        <line num="7" count="292" type="stmt"/>
-        <line num="8" count="292" type="stmt"/>
-        <line num="9" count="292" type="stmt"/>
-        <line num="10" count="292" type="stmt"/>
-        <line num="12" count="292" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="20" type="stmt"/>
+        <line num="7" count="20" type="stmt"/>
+        <line num="8" count="20" type="stmt"/>
+        <line num="9" count="20" type="stmt"/>
+        <line num="10" count="20" type="stmt"/>
+        <line num="12" count="20" type="stmt"/>
       </file>
       <file name="rental.router.js" path="C:\Users\marad\luciano\desafio-final\src\routes\rental.router.js">
         <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="3" count="16" type="stmt"/>
-        <line num="5" count="16" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="292" type="stmt"/>
-        <line num="7" count="292" type="stmt"/>
-        <line num="8" count="292" type="stmt"/>
-        <line num="9" count="292" type="stmt"/>
-        <line num="10" count="292" type="stmt"/>
-        <line num="12" count="292" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="20" type="stmt"/>
+        <line num="7" count="20" type="stmt"/>
+        <line num="8" count="20" type="stmt"/>
+        <line num="9" count="20" type="stmt"/>
+        <line num="10" count="20" type="stmt"/>
+        <line num="12" count="20" type="stmt"/>
       </file>
       <file name="reserve.router.js" path="C:\Users\marad\luciano\desafio-final\src\routes\reserve.router.js">
-        <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="3" count="16" type="cond" truecount="1" falsecount="0"/>
-        <line num="4" count="292" type="stmt"/>
-        <line num="5" count="292" type="stmt"/>
-        <line num="6" count="292" type="stmt"/>
-        <line num="7" count="292" type="stmt"/>
-        <line num="8" count="292" type="stmt"/>
-        <line num="10" count="292" type="stmt"/>
+        <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="20" type="stmt"/>
+        <line num="7" count="20" type="stmt"/>
+        <line num="8" count="20" type="stmt"/>
+        <line num="9" count="20" type="stmt"/>
+        <line num="10" count="20" type="stmt"/>
+        <line num="12" count="20" type="stmt"/>
       </file>
       <file name="swagger.router.js" path="C:\Users\marad\luciano\desafio-final\src\routes\swagger.router.js">
         <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="16" type="stmt"/>
-        <line num="4" count="16" type="cond" truecount="1" falsecount="0"/>
-        <line num="5" count="292" type="stmt"/>
-        <line num="7" count="292" type="stmt"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="20" type="stmt"/>
+        <line num="7" count="20" type="stmt"/>
       </file>
     </package>
   </project>
