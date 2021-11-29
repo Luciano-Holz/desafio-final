@@ -1,5 +1,5 @@
 const { serialize, paginateSerialize } = require('../serialize/FleetSerialize');
-const FleetService = require('../service/FleetService');
+const FleetService = require('../service/Fleet');
 
 class FleetController {
   async create(req, res) {
