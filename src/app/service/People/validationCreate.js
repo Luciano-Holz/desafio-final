@@ -4,10 +4,12 @@ const { validateCpf } = require('../../utils/cpfValidator');
 const PeopleRepository = require('../../repository/PeopleRepository');
 
 const checkCpf = async (payload) => {
-  if (!validateCpf(payload)) throw new BadRequest('Conflict', `Cpf ${payload.cpf} is invalid`);
-  const checkCpfData = await PeopleRepository.getAll({ cpf: payload.cpf });
+  const { cpf } = payload;
+  if (!validateCpf(payload)) throw new BadRequest('Conflict', `Cpf ${cpf} is invalid`);
+
+  const checkCpfData = await PeopleRepository.getAll({ cpf });
   if (checkCpfData.docs.length > 0) {
-    throw new BadRequest('Conflict', `Cpf ${payload.cpf} is already in use`);
+    throw new BadRequest('Conflict', `Cpf ${cpf} is already in use`);
   }
 };
 
@@ -17,9 +19,10 @@ const checkAge = ({ data_nascimento }) => {
 };
 
 const checkEmail = async (payload) => {
-  const checkEmailData = await PeopleRepository.getAll({ email: payload.email });
+  const { email } = payload;
+  const checkEmailData = await PeopleRepository.getAll({ email });
   if (checkEmailData.docs.length > 0) {
-    throw new BadRequest('Conflict', `Email ${payload.email} is already in use`);
+    throw new BadRequest('Conflict', `Email ${email} is already in use`);
   }
 };
 
