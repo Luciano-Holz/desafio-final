@@ -1,5 +1,5 @@
 const { paginateSerialize, serialize } = require('../serialize/RentalSerialize');
-const RentalService = require('../service/RentalService');
+const RentalService = require('../service/Rental');
 
 class RentalController {
   async create(req, res) {
