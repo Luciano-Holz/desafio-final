@@ -9,9 +9,9 @@
 ## Info
 
 <p align="center">
-   <img src="http://img.shields.io/static/v1?label=Node&message=14.18.1&color=green&style=for-the-badge&logo=node.js"/>
+   <img src="http://img.shields.io/static/v1?label=Node&message=12.22.5&color=green&style=for-the-badge&logo=node.js"/>
    <img src="http://img.shields.io/static/v1?label=MongoDB&message=5.0.3&color=green&style=for-the-badge&logo=mongodb"/>
-   <img src="http://img.shields.io/static/v1?label=Typescript&message=4.4.4&color=yellow&style=for-the-badge&logo=javascript"/>
+   <img src="http://img.shields.io/static/v1?label=javascript&message=1.7&color=yellow&style=for-the-badge&logo=javascript"/>
    <img src="http://img.shields.io/static/v1?label=express&message=4.17.1&color=blue&style=for-the-badge&logo=express"/>
    <img src="http://img.shields.io/static/v1?label=STATUS&message=DEVELOPING&color=yellow&style=for-the-badge"/>
 </p>
@@ -21,7 +21,11 @@
       <img src="http://img.shields.io/static/v1?label=HEROKU&message=Click here to access&color=blue&style=for-the-badge&logo=heroku"/>
 </a>
 
-## Instaling with npm
+## Instaling <API Locadora Compassolisa>
+
+```
+git pull https://github.com/Luciano-Holz/desafio-final.git
+```
 
 ```
 npm install
@@ -60,23 +64,9 @@ npm install
 - Postman
 
 ## Requirements
-- MongoDB
-- NodeJS
+[Node.js](https://nodejs.org/en/)
 
-## Instaling <API Locadora Compassolisa>
-
-To install <API Locadora Compassolisa>:
-Do pull on repository:
-
-```
-git pull https://github.com/Luciano-Holz/desafio-final1.git
-```
-
-Na pasta /compassolisa:
-
-```
-npm install
-```
+[MongoDB](https://www.mongodb.com/pt-br)
 
 ##  Using <API Locadora Compassolisa>
 
