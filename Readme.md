@@ -4,7 +4,22 @@
 
 ## Description
 
-- API NodeJs to register Cars, Peoples and Rental Companies
+- API NodeJs to register Cars, Peoples, Rental Companies, Fleet and Reserves
+
+## Info
+
+<p align="center">
+   <img src="http://img.shields.io/static/v1?label=Node&message=14.18.1&color=green&style=for-the-badge&logo=node.js"/>
+   <img src="http://img.shields.io/static/v1?label=MongoDB&message=5.0.3&color=green&style=for-the-badge&logo=mongodb"/>
+   <img src="http://img.shields.io/static/v1?label=Typescript&message=4.4.4&color=yellow&style=for-the-badge&logo=javascript"/>
+   <img src="http://img.shields.io/static/v1?label=express&message=4.17.1&color=blue&style=for-the-badge&logo=express"/>
+   <img src="http://img.shields.io/static/v1?label=STATUS&message=DEVELOPING&color=yellow&style=for-the-badge"/>
+</p>
+
+## Running on 
+<a href="https://apinodecompassolisa.herokuapp.com/api/v1/api-docs/">
+      <img src="http://img.shields.io/static/v1?label=HEROKU&message=Click here to access&color=blue&style=for-the-badge&logo=heroku"/>
+</a>
 
 ## Instaling with npm
 
@@ -18,11 +33,11 @@ npm install
 - MongoDB
 - Dependencies:
     - @joi/date 2.1.0
-    -axios 0.24.0
+    - axios 0.24.0
+    - bcryptjs 2.4.3
     - cors 2.8.5
+    - dotenv 10.0.0
     - express 4.17.1
-    - factory-girl 5.0.4
-    - faker 5.5.3
     - joi 17.4.2
     - jsonwebtoken 8.5.1
     - moment 2.29.1
@@ -30,6 +45,8 @@ npm install
     - mongoose-paginate-v2 1.4.2
     - swagger-ui-express 4.1.6
 - devDependencies:
+    - chance 1.1.8
+    - cross-env 7.0.3
     - eslint 7.32.0
     - eslint-config-airbnb-base 14.2.1
     - eslint-config-plugin 1.0.11
@@ -76,20 +93,12 @@ Run as developer:
 ```
 npm run dev
 ```
-Run to test: 
+Run test: 
 
 ```
 npm run test
 ```
 
-To use API with swagger:
+##  Licence <API Locadora Compassolisa>
 
-```
-http://127.0.0.1:3000/api/v1/api-docs
-```
-
-##  Status <API Locadora Compassolisa>
-
-```
-in development
-```
+<img src="http://img.shields.io/static/v1?label=License&message=MIT&color=red&style=for-the-badge"/>
