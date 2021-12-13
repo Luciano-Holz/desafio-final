@@ -90,5 +90,9 @@ npm run test
 
 ##  Licence <API Locadora Compassolisa>
 
+<p aling="center">
+
 <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=red&style=for-the-badge"/>
 <img src="http://img.shields.io/static/v1?label=STATUS&message=DEVELOPING&color=yellow&style=for-the-badge"/>
+
+</p>
