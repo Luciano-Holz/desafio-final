@@ -13,7 +13,6 @@
    <img src="http://img.shields.io/static/v1?label=MongoDB&message=5.0.3&color=green&style=for-the-badge&logo=mongodb"/>
    <img src="http://img.shields.io/static/v1?label=javascript&message=1.7&color=yellow&style=for-the-badge&logo=javascript"/>
    <img src="http://img.shields.io/static/v1?label=express&message=4.17.1&color=blue&style=for-the-badge&logo=express"/>
-   <img src="http://img.shields.io/static/v1?label=STATUS&message=DEVELOPING&color=yellow&style=for-the-badge"/>
 </p>
 
 ## Running on 
@@ -92,3 +91,4 @@ npm run test
 ##  Licence <API Locadora Compassolisa>
 
 <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=red&style=for-the-badge"/>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=DEVELOPING&color=yellow&style=for-the-badge"/>
