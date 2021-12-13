@@ -1,14 +1,11 @@
 const Joi = require('joi');
+const { idPattern } = require('../../utils/regexPatterns');
 
 module.exports = async (req, res, next) => {
   try {
     const schema = Joi.object({
-      _id: Joi.string()
-        .pattern(/^[0-9a-fA-F]{24}$/)
-        .required(),
-      _idReserve: Joi.string()
-        .pattern(/^[0-9a-fA-F]{24}$/)
-        .required()
+      _id: Joi.string().regex(idPattern()).required(),
+      _idReserve: Joi.string().regex(idPattern()).required()
     });
 
     const { error } = await schema.validate(req.params, { abortEarly: false });

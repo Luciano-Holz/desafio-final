@@ -1,12 +1,11 @@
 const Joi = require('joi').extend(require('@joi/date'));
+const { cpfPattern } = require('../../utils/regexPatterns');
 
 module.exports = async (req, res, next) => {
   try {
     const schema = Joi.object({
       nome: Joi.string().trim().min(3).required(),
-      cpf: Joi.string()
-        .pattern(new RegExp(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/))
-        .required(),
+      cpf: Joi.string().regex(cpfPattern()).required(),
       data_nascimento: Joi.date().format('DD/MM/YYYY').required(),
       email: Joi.string().email().required(),
       senha: Joi.string().min(6).required(),

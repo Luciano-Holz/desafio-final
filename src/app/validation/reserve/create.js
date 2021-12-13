@@ -1,19 +1,14 @@
 const Joi = require('joi').extend(require('@joi/date'));
+const { idPattern } = require('../../utils/regexPatterns');
 
 module.exports = async (req, res, next) => {
   try {
     const schema = Joi.object({
-      id_user: Joi.string()
-        .pattern(/^[0-9a-fA-F]{24}$/)
-        .required(),
+      id_user: Joi.string().regex(idPattern()).required(),
       data_inicio: Joi.date().format('DD/MM/YYYY').required(),
       data_fim: Joi.date().format('DD/MM/YYYY').required(),
-      id_carro: Joi.string()
-        .pattern(/^[0-9a-fA-F]{24}$/)
-        .required(),
-      id_locadora: Joi.string()
-        .pattern(/^[0-9a-fA-F]{24}$/)
-        .required()
+      id_carro: Joi.string().regex(idPattern()).required(),
+      id_locadora: Joi.string().regex(idPattern()).required()
     });
 
     const { error } = await schema.validate(req.body, { abortEarly: false });
