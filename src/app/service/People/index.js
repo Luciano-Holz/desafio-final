@@ -1,6 +1,6 @@
 const moment = require('moment');
 const PeopleRepository = require('../../repository/PeopleRepository');
-const { checkValidation } = require('./validationCreate');
+const { checkValidation } = require('./checkValidation');
 const BadRequest = require('../../errors/BadRequest');
 const NotFound = require('../../errors/NotFound');
 
