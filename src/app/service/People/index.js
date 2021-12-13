@@ -1,14 +1,24 @@
 const moment = require('moment');
 const PeopleRepository = require('../../repository/PeopleRepository');
-const { checkCreate } = require('./validationCreate');
+const { checkValidation } = require('./validationCreate');
 const BadRequest = require('../../errors/BadRequest');
 const NotFound = require('../../errors/NotFound');
-const { checkUpdate } = require('./validationUpdate');
 
 class PeopleService {
   async create(payload) {
+    const { cpf, email } = payload;
     payload.data_nascimento = moment(payload.data_nascimento, 'DD/MM/YYYY').format('YYYY-MM-DD');
-    await checkCreate(payload);
+    await checkValidation(payload);
+
+    const checkCpfData = await PeopleRepository.getAll({ cpf });
+    if (checkCpfData.docs.length > 0) {
+      throw new BadRequest('Conflict', `Cpf ${cpf} is already in use`);
+    }
+
+    const checkEmailData = await PeopleRepository.getAll({ email });
+    if (checkEmailData.docs.length > 0) {
+      throw new BadRequest('Conflict', `Email ${email} is already in use`);
+    }
     const results = await PeopleRepository.create(payload);
     if (!results) throw new NotFound('People', 'not found');
     return results;
@@ -28,7 +38,7 @@ class PeopleService {
 
   async update(_id, payload) {
     payload.data_nascimento = moment(payload.data_nascimento, 'DD/MM/YYYY').format('YYYY-MM-DD');
-    await checkUpdate(payload);
+    await checkValidation(payload);
     const result = PeopleRepository.update(_id, payload);
     if (!result) throw new BadRequest('id', `Id ${_id} is invalid`);
     return result;
