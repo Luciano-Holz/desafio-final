@@ -1,4 +1,4 @@
-# API Locadora Compassolisa
+# 🚀 API Locadora Compassolisa
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Luciano-Holz/desafio-final1)
 
