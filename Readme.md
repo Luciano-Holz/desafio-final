@@ -62,6 +62,19 @@ npm install
 - ViaCEP - Webservice CEP
 - Postman
 
+## Example for .ENV and .ENV.TEST
+
+Database name must be different for each one
+
+```
+DB_HOST=127.0.0.1
+DB_USER=compassolisa
+DB_CONNECTION=mongodb://localhost:27017/
+DB_PORT= 3000
+API_SECRET=25d55ad283aa400af464c76d713c07ad
+CEPAPIURL=https://viacep.com.br/ws/{cep}/json/
+```
+
 ## Requirements
 [Node.js](https://nodejs.org/en/)
 
