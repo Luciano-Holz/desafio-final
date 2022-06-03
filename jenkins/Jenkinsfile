@@ -1,10 +1,10 @@
 #!/usr/bin/env groovy
 pipeline {
-    agent none
+    agent any
     stages {
         stage('Build') {
             agent {
-                label { image 'maven:3.8.5-jdk-11' }
+                docker { image 'maven:3.8.5-jdk-11' }
             }
         steps {
             sh "mvn package -Dmaven.test.skip=true"
